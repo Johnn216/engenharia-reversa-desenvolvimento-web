@@ -23,6 +23,14 @@ Este repositório contém **dois exercícios práticos** de transformação de p
 - ✅ SEO técnico (meta tags, Schema.org, hierarquia de headings)
 - ✅ Widget de acessibilidade flutuante (alto contraste, fonte ajustável, leitor de tela e mais)
 
+🤖 Uso de Inteligência Artificial
+
+Durante o desenvolvimento deste projeto, utilizei a inteligência artificial Claude (Anthropic) para revisão de conteúdo, sugestões de estrutura e orientação na implementação de algumas funcionalidades.
+
+Todas as decisões finais, código e conteúdo foram produzidos por mim. O uso da IA teve caráter auxiliar, ajudando a melhorar a clareza, organização e qualidade do projeto, mas não substituiu a autoria humana.
+
+Transparência sobre ferramentas utilizadas é fundamental para a ética em desenvolvimento de software e documentação técnica.
+
 ---
 
 ## 📁 Estrutura
