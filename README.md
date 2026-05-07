@@ -36,10 +36,10 @@ Este repositório contém **dois exercícios práticos** de transformação de p
 ---
 
 # Acesse:
-https://projeto-melhora-acessibilidade-dev-we.netlify.app/
+https://projeto-melhora-acessibilidade-dev-we.netlify.app/    <---- site remodelado
+https://arngren.net/      <----site de inspiração
 
 
-```
 
 ## ✅ Missões cumpridas
 
