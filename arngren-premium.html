@@ -1,0 +1,2964 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO ═══════════════════════════ -->
+  <title>Arngren — Drones, Bicicletas Elétricas e RC desde 1983</title>
+  <meta name="description"
+    content="Loja especializada em drones, bicicletas elétricas, scooters e modelismo de controle remoto. Catálogo curado, suporte técnico e entrega para todo o Brasil." />
+  <meta name="keywords"
+    content="drones, bicicleta elétrica, scooter elétrica, hoverboard, helicóptero rc, arngren" />
+  <meta name="author" content="Arngren" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#f4ede0" />
+  <link rel="canonical" href="#" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arngren — Drones, Bicicletas Elétricas e RC desde 1983" />
+  <meta property="og:description" content="Drones, e-bikes, scooters e modelismo. Catálogo curado, suporte técnico." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Arngren" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Store","name":"Arngren","description":"Loja de drones, bicicletas elétricas e modelismo RC.","url":"#","priceRange":"$$$","address":{"@type":"PostalAddress","addressCountry":"BR"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"Product","position":1,"name":"DJI Mavic 4 Pro","description":"Drone profissional 8K"},{"@type":"Product","position":2,"name":"Stark Eco 2","description":"Bicicleta elétrica urbana"},{"@type":"Product","position":3,"name":"Helix RC Pro","description":"Helicóptero RC profissional"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"#"}]}
+  </script>
+
+  <!-- Tipografia característica: Fraunces (serif com personalidade) + Inter Tight -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ════════════════════════════════════════════════
+       PALETA — Editorial print, longe do "AI luxury"
+       Creme + tinta + terracota + verde-musgo
+    ═════════════════════════════════════════════════ */
+    :root {
+      --paper:       #f4ede0;   /* fundo creme aquecido */
+      --paper-dark:  #ebe2cf;   /* superfície */
+      --paper-deep:  #1a140e;   /* fundo escuro do footer */
+      --ink:         #1a140e;   /* tinta principal (quase preto castanho) */
+      --ink-soft:    #4a3f30;
+      --ink-mute:    #756650;
+      --line:        #d4c8b0;   /* linhas/divisores */
+      --terra:       #c44d29;   /* terracota — accent principal */
+      --terra-dark:  #8a3318;
+      --moss:        #4a5d3a;   /* verde-musgo — accent 2 */
+      --bone:        #faf5e8;   /* branco quente */
+      --warning:     #b8401e;
+
+      --serif:       'Fraunces', 'Cooper', Georgia, serif;
+      --sans:        'Inter Tight', 'Helvetica Neue', system-ui, sans-serif;
+      --mono:        'JetBrains Mono', 'SFMono-Regular', monospace;
+
+      --max:         1280px;
+      --t:           cubic-bezier(.2,.8,.2,1);
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.55;
+      letter-spacing: -.005em;
+      overflow-x: hidden;
+      /* Textura de papel sutil */
+      background-image:
+        radial-gradient(ellipse at top, rgba(196,77,41,.04), transparent 60%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' /><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .04 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    }
+
+    img, svg { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { list-style: none; }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ⭐ SKIP LINK */
+    .skip-link {
+      position: absolute; top: -200px; left: 1rem;
+      background: var(--ink); color: var(--bone);
+      padding: .9rem 1.5rem;
+      font-family: var(--mono);
+      font-size: .8rem; z-index: 9999;
+      transition: top .25s;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    #aria-live-region {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0 0 0 0);
+    }
+
+    /* Focus global */
+    :focus-visible {
+      outline: 2px solid var(--terra);
+      outline-offset: 3px;
+    }
+
+    /* ════════════════════════════════════════════════
+       TIPOGRAFIA EDITORIAL
+       Fraunces tem variação SOFT/WONK — vou usar WONK para
+       caracteres com personalidade real (g, k, italics)
+    ═════════════════════════════════════════════════ */
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -.02em;
+      line-height: 1;
+      font-variation-settings: "SOFT" 50, "WONK" 1;
+    }
+    h1 i, h2 i, h3 i, em {
+      font-style: italic;
+      font-variation-settings: "SOFT" 100, "WONK" 1;
+    }
+
+    /* ════════════════════════════════════════════════
+       TICKER NO TOPO — diferente de "topbar luxury"
+    ═════════════════════════════════════════════════ */
+    .ticker {
+      background: var(--ink);
+      color: var(--bone);
+      overflow: hidden;
+      border-bottom: 1px solid var(--ink);
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .02em;
+    }
+    .ticker-track {
+      display: flex;
+      gap: 4rem;
+      padding: .65rem 0;
+      animation: ticker 35s linear infinite;
+      white-space: nowrap;
+      width: max-content;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ticker-item { display: inline-flex; align-items: center; gap: 1rem; }
+    .ticker-item::before {
+      content: "✱";
+      color: var(--terra);
+      font-family: var(--serif);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track { animation: none; }
+    }
+
+    /* ════════════════════════════════════════════════
+       HEADER — limpo, magazine, com régua embaixo
+    ═════════════════════════════════════════════════ */
+    .site-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--ink);
+      position: sticky; top: 0; z-index: 100;
+    }
+
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .brand a {
+      font-family: var(--serif);
+      font-size: 1.85rem;
+      font-weight: 500;
+      font-variation-settings: "SOFT" 100, "WONK" 1;
+      color: var(--ink);
+      letter-spacing: -.03em;
+      display: inline-block;
+    }
+    .brand a span {
+      color: var(--terra);
+      font-style: italic;
+    }
+    .brand-tag {
+      font-family: var(--mono);
+      font-size: .65rem;
+      color: var(--ink-mute);
+      letter-spacing: .05em;
+      margin-top: -2px;
+      display: block;
+    }
+
+    .nav-principal ul {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+    }
+    .nav-principal a {
+      font-family: var(--sans);
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: -.005em;
+      position: relative;
+      padding: .25rem 0;
+      transition: color .2s;
+    }
+    .nav-principal a::after {
+      content: '';
+      position: absolute; left: 0; right: 0; bottom: -2px;
+      height: 1px; background: var(--terra);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .35s var(--t);
+    }
+    .nav-principal a:hover { color: var(--terra); }
+    .nav-principal a:hover::after { transform: scaleX(1); }
+
+    .header-actions { display: flex; gap: 1rem; align-items: center; }
+
+    /* Hamburger menu (só aparece em mobile) */
+    .btn-menu {
+      display: none;
+      width: 44px; height: 44px;
+      background: transparent;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+    .btn-menu:hover {
+      background: var(--ink);
+      color: var(--bone);
+    }
+    .btn-menu:focus-visible { outline: 2px solid var(--terra); outline-offset: 2px; }
+    .btn-menu .ham-line {
+      width: 18px; height: 1.5px;
+      background: currentColor;
+      position: relative;
+    }
+    .btn-menu .ham-line::before,
+    .btn-menu .ham-line::after {
+      content: ''; position: absolute;
+      left: 0; width: 18px; height: 1.5px;
+      background: currentColor;
+      transition: transform .3s;
+    }
+    .btn-menu .ham-line::before { top: -6px; }
+    .btn-menu .ham-line::after  { top: 6px; }
+    .btn-menu[aria-expanded="true"] .ham-line { background: transparent; }
+    .btn-menu[aria-expanded="true"] .ham-line::before { transform: rotate(45deg) translate(4px, 4px); }
+    .btn-menu[aria-expanded="true"] .ham-line::after  { transform: rotate(-45deg) translate(4px, -4px); }
+
+    /* Drawer mobile */
+    .mobile-drawer {
+      position: fixed;
+      top: 0; right: 0;
+      width: 85%;
+      max-width: 360px;
+      height: 100vh;
+      background: var(--paper);
+      border-left: 1px solid var(--ink);
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform .35s var(--t);
+      padding: 5rem 2rem 2rem;
+      overflow-y: auto;
+      box-shadow: -10px 0 40px rgba(0,0,0,.15);
+    }
+    .mobile-drawer[aria-hidden="false"] { transform: translateX(0); }
+
+    .mobile-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 20, 14, .5);
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+    }
+    .mobile-drawer-overlay[aria-hidden="false"] {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-drawer h2 {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .mobile-drawer ul {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      margin-bottom: 2rem;
+    }
+    .mobile-drawer ul a {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -.015em;
+      padding: .65rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      font-variation-settings: "SOFT" 30, "WONK" 1;
+      transition: color .2s;
+    }
+    .mobile-drawer ul a:hover { color: var(--terra); }
+    .mobile-drawer ul a::after {
+      content: '→';
+      font-family: var(--sans);
+      font-size: 1rem;
+      color: var(--ink-mute);
+    }
+    .mobile-drawer-info {
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: var(--ink-mute);
+      line-height: 1.7;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+    .mobile-drawer-info strong { color: var(--terra); font-weight: 500; }
+
+    .icon-btn {
+      width: 40px; height: 40px;
+      background: transparent; border: none;
+      color: var(--ink); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      transition: color .2s;
+    }
+    .icon-btn:hover { color: var(--terra); }
+    .icon-btn .badge {
+      position: absolute; top: 4px; right: 4px;
+      background: var(--terra); color: var(--bone);
+      width: 16px; height: 16px;
+      border-radius: 50%; font-size: .65rem;
+      font-weight: 700; font-family: var(--mono);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ════════════════════════════════════════════════
+       HERO — EDITORIAL com tipografia gigante
+       Sem gradient mesh, sem "tecnologia como arte"
+       Layout assimétrico de revista
+    ═════════════════════════════════════════════════ */
+    .hero {
+      padding: 3rem 0 4rem;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .03em;
+      color: var(--ink-mute);
+      margin-bottom: 2rem;
+    }
+    .hero-meta .dot {
+      width: 6px; height: 6px;
+      background: var(--terra);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 9vw, 7.5rem);
+      font-weight: 400;
+      line-height: .92;
+      letter-spacing: -.04em;
+      font-variation-settings: "SOFT" 30, "WONK" 1, "opsz" 144;
+      color: var(--ink);
+    }
+    .hero h1 .terra {
+      color: var(--terra);
+      font-style: italic;
+      font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+    }
+    .hero h1 sup {
+      font-family: var(--mono);
+      font-size: .25em;
+      color: var(--terra);
+      font-weight: 500;
+      vertical-align: super;
+      margin-left: .15em;
+    }
+
+    .hero-side {
+      padding-bottom: 1rem;
+    }
+
+    .hero-lead {
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 38ch;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Botões editoriais */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      padding: .9rem 1.5rem;
+      font-family: var(--sans);
+      font-size: .85rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all .25s var(--t);
+      min-height: 44px;
+      border-radius: 0;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--bone);
+    }
+    .btn-primary:hover {
+      background: var(--terra);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+    .btn-ghost:hover {
+      background: var(--ink);
+      color: var(--bone);
+    }
+
+    /* Hero feature card / produto destaque */
+    .hero-feature {
+      max-width: var(--max);
+      margin: 4rem auto 0;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 3rem;
+    }
+
+    .feature-img {
+      aspect-ratio: 4 / 3;
+      background: var(--ink);
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-img svg { width: 100%; height: 100%; }
+
+    .feature-content {
+      padding: 0 0 0 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .feature-tag {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .05em;
+      color: var(--terra);
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .feature-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -.025em;
+      margin-bottom: 1.25rem;
+      font-variation-settings: "SOFT" 30, "WONK" 1, "opsz" 96;
+    }
+
+    .feature-desc {
+      font-size: .95rem;
+      color: var(--ink-soft);
+      max-width: 42ch;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Tabela de specs */
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+    .specs dt {
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: var(--ink-mute);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: .15rem;
+    }
+    .specs dd {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1;
+      font-variation-settings: "SOFT" 30, "WONK" 1;
+    }
+    .specs dd .un {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--ink-mute);
+      margin-left: .25rem;
+      letter-spacing: 0;
+    }
+
+    .feature-price {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .price-big {
+      font-family: var(--serif);
+      font-size: 2.25rem;
+      font-weight: 500;
+      color: var(--ink);
+      font-variation-settings: "SOFT" 30, "WONK" 1;
+    }
+    .price-big .moeda {
+      font-size: 1rem;
+      color: var(--ink-mute);
+      margin-right: .25rem;
+      font-family: var(--mono);
+      font-weight: 400;
+    }
+    .price-cond {
+      font-family: var(--mono);
+      font-size: .75rem;
+      color: var(--ink-mute);
+    }
+
+    /* ════════════════════════════════════════════════
+       TIRA DE BARRA HORIZONTAL — REGUA + CATEGORIAS
+       Estilo "navegação editorial"
+    ═════════════════════════════════════════════════ */
+    .strip-categorias {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      background: var(--paper-dark);
+      padding: 0;
+    }
+    .strip-categorias .container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: stretch;
+    }
+    .strip-cat {
+      padding: 1.25rem .85rem;
+      border-right: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--ink);
+      transition: background .2s;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .strip-cat:last-child { border-right: none; }
+    .strip-cat:hover { background: var(--paper); color: var(--terra); }
+    .strip-cat .num {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--terra);
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+
+    /* ════════════════════════════════════════════════
+       SEÇÕES com layout de revista
+    ═════════════════════════════════════════════════ */
+    section {
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .section-header {
+      max-width: var(--max);
+      margin: 0 auto 3.5rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+      align-items: end;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1.5rem;
+    }
+
+    .section-num {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--ink-mute);
+      letter-spacing: .05em;
+      display: block;
+      margin-bottom: .65rem;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      line-height: .95;
+      letter-spacing: -.025em;
+      font-variation-settings: "SOFT" 50, "WONK" 1, "opsz" 96;
+      color: var(--ink);
+    }
+
+    .section-intro {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      max-width: 50ch;
+      line-height: 1.6;
+      padding-bottom: .25rem;
+    }
+    .section-intro strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ════════════════════════════════════════════════
+       GRID DE PRODUTOS — estilo catálogo de revista
+    ═════════════════════════════════════════════════ */
+    .produtos-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--ink);
+      border-left: 1px solid var(--ink);
+    }
+
+    .produto {
+      border-right: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 1.25rem;
+      background: var(--paper);
+      transition: background .25s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .produto:hover { background: var(--paper-dark); }
+
+    .produto-num {
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--ink-mute);
+      margin-bottom: 1rem;
+      letter-spacing: .03em;
+    }
+
+    .produto-img {
+      aspect-ratio: 1 / 1;
+      background: var(--bone);
+      border: 1px solid var(--line);
+      margin-bottom: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .produto-img svg {
+      width: 65%; height: 65%;
+      transition: transform .4s var(--t);
+    }
+    .produto:hover .produto-img svg { transform: scale(1.06); }
+
+    .produto-tag {
+      position: absolute;
+      top: .65rem; left: .65rem;
+      background: var(--terra);
+      color: var(--bone);
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .04em;
+      padding: .25rem .5rem;
+      text-transform: uppercase;
+    }
+    .produto-tag.tag-novo { background: var(--moss); }
+    .produto-tag.tag-best { background: var(--ink); }
+
+    .produto-cat {
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--ink-mute);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      margin-bottom: .35rem;
+    }
+
+    .produto h3 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: -.015em;
+      line-height: 1.05;
+      margin-bottom: .65rem;
+      font-variation-settings: "SOFT" 30, "WONK" 1, "opsz" 24;
+    }
+    .produto p.desc {
+      font-size: .85rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .produto-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--line);
+    }
+    .produto-preco {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--ink);
+      font-variation-settings: "SOFT" 30, "WONK" 1;
+    }
+    .produto-preco .m {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--ink-mute);
+      margin-right: .2rem;
+      font-weight: 400;
+    }
+    .produto-acao {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--terra);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .produto:hover .produto-acao { text-decoration: underline; }
+
+    /* ════════════════════════════════════════════════
+       SPLIT EDITORIAL — texto + número grande
+    ═════════════════════════════════════════════════ */
+    .split-section {
+      background: var(--paper-dark);
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .split-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .split-text {
+      padding: 5rem 4rem 5rem 0;
+      border-right: 1px solid var(--ink);
+    }
+    .split-text h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      margin-bottom: 1.5rem;
+      max-width: 18ch;
+      font-variation-settings: "SOFT" 30, "WONK" 1, "opsz" 60;
+    }
+    .split-text p {
+      color: var(--ink-soft);
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+      max-width: 45ch;
+    }
+    .split-text p.lead {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.3rem;
+      line-height: 1.45;
+      color: var(--ink);
+      border-left: 3px solid var(--terra);
+      padding-left: 1.25rem;
+      margin-bottom: 1.5rem;
+      font-variation-settings: "SOFT" 100, "WONK" 1;
+    }
+
+    .split-numbers {
+      padding: 5rem 0 5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 2rem;
+      align-content: center;
+    }
+    .num-block {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1rem;
+    }
+    .num-block .big {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 400;
+      line-height: 1;
+      color: var(--ink);
+      font-variation-settings: "SOFT" 50, "WONK" 1, "opsz" 144;
+      margin-bottom: .25rem;
+    }
+    .num-block .big i {
+      color: var(--terra);
+      font-style: italic;
+      font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+    }
+    .num-block .label {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--ink-mute);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    /* ════════════════════════════════════════════════
+       HISTÓRIAS / ARTIGOS
+    ═════════════════════════════════════════════════ */
+    .historias-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .historia {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 2px solid var(--ink);
+    }
+    .historia-meta {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .04em;
+      color: var(--ink-mute);
+      text-transform: uppercase;
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+    }
+    .historia-meta .cat {
+      color: var(--terra);
+      font-weight: 500;
+    }
+    .historia h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      line-height: 1.1;
+      letter-spacing: -.015em;
+      font-variation-settings: "SOFT" 30, "WONK" 1, "opsz" 36;
+    }
+    .historia.featured h3 {
+      font-size: 2.5rem;
+    }
+    .historia p {
+      color: var(--ink-soft);
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+    .historia a.read-more {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--terra);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      align-self: flex-start;
+      border-bottom: 1px solid var(--terra);
+      padding-bottom: 1px;
+    }
+    .historia-img {
+      aspect-ratio: 16 / 10;
+      background: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .historia.featured .historia-img { aspect-ratio: 4 / 3; }
+
+    /* ════════════════════════════════════════════════
+       NEWSLETTER — magazine subscribe
+    ═════════════════════════════════════════════════ */
+    .newsletter-section {
+      background: var(--ink);
+      color: var(--bone);
+      padding: 5rem 0;
+      border-top: 1px solid var(--ink);
+    }
+
+    .newsletter-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .newsletter-section h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1;
+      letter-spacing: -.025em;
+      color: var(--bone);
+      font-variation-settings: "SOFT" 50, "WONK" 1, "opsz" 96;
+    }
+    .newsletter-section h2 i {
+      color: var(--terra);
+      font-style: italic;
+      font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 96;
+    }
+
+    .newsletter-section p {
+      color: rgba(250, 245, 232, .7);
+      font-size: 1rem;
+      max-width: 42ch;
+      margin: 1.25rem 0 0;
+    }
+
+    .newsletter-form {
+      display: flex;
+      align-items: stretch;
+      border-bottom: 1px solid rgba(250, 245, 232, .3);
+    }
+    .newsletter-form:focus-within {
+      border-bottom-color: var(--terra);
+    }
+    .newsletter-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--bone);
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      padding: 1rem 0;
+      outline: none;
+    }
+    .newsletter-form input::placeholder {
+      color: rgba(250, 245, 232, .4);
+    }
+    .newsletter-form button {
+      background: transparent;
+      border: none;
+      color: var(--bone);
+      font-family: var(--mono);
+      font-size: .8rem;
+      letter-spacing: .04em;
+      cursor: pointer;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      transition: color .2s;
+      min-height: 44px;
+    }
+    .newsletter-form button:hover { color: var(--terra); }
+
+    .newsletter-meta {
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: rgba(250, 245, 232, .4);
+      letter-spacing: .04em;
+      margin-top: 1rem;
+      text-transform: uppercase;
+    }
+
+    /* ════════════════════════════════════════════════
+       FOOTER
+    ═════════════════════════════════════════════════ */
+    footer.site-footer {
+      background: var(--paper-deep);
+      color: var(--bone);
+      padding: 4rem 0 0;
+      border-top: 1px solid var(--ink);
+    }
+
+    .footer-top {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-brand .brand-link {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--bone);
+      letter-spacing: -.03em;
+      font-variation-settings: "SOFT" 100, "WONK" 1;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+    }
+    .footer-brand .brand-link span { color: var(--terra); font-style: italic; }
+
+    .footer-brand p {
+      color: rgba(250, 245, 232, .65);
+      font-size: .9rem;
+      max-width: 38ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-redes { display: flex; gap: .5rem; }
+    .footer-redes a {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(250, 245, 232, .25);
+      color: var(--bone);
+      font-family: var(--mono);
+      font-size: .72rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .25s;
+    }
+    .footer-redes a:hover {
+      background: var(--terra);
+      border-color: var(--terra);
+    }
+
+    .footer-col h2 {
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 500;
+      color: var(--terra);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid rgba(250, 245, 232, .15);
+    }
+    .footer-col nav ul {
+      display: flex; flex-direction: column; gap: .65rem;
+    }
+    .footer-col nav a {
+      font-size: .85rem;
+      color: rgba(250, 245, 232, .7);
+      transition: color .2s;
+    }
+    .footer-col nav a:hover { color: var(--bone); }
+
+    /* ─── Assinatura dos devs ─── */
+    .devs-strip {
+      border-top: 1px solid rgba(250, 245, 232, .12);
+      padding: 2.25rem 1.5rem;
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .devs-strip .devs-info {
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
+    }
+    .devs-strip .devs-label {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--terra);
+    }
+
+    /* Cards de devs com foto */
+    .devs-people {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .dev-card {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+    .dev-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(250, 245, 232, .2);
+      transition: all .35s var(--t);
+      filter: saturate(.95);
+      background: var(--carbon);
+    }
+    .dev-card:hover .dev-avatar {
+      border-color: var(--terra);
+      transform: scale(1.06);
+      filter: saturate(1.1);
+    }
+    .dev-name {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--bone);
+      letter-spacing: -.005em;
+      line-height: 1.1;
+      font-variation-settings: "SOFT" 50, "WONK" 1;
+    }
+    .dev-name small {
+      display: block;
+      font-family: var(--mono);
+      font-size: .62rem;
+      color: var(--ink-mute);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-top: .15rem;
+      opacity: .7;
+    }
+    .dev-amp {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--terra);
+      font-size: 1.6rem;
+      font-variation-settings: "SOFT" 100, "WONK" 1;
+      line-height: 1;
+      padding: 0 .25rem;
+    }
+    .devs-strip .devs-github {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .65rem 1.15rem;
+      border: 1px solid rgba(250, 245, 232, .25);
+      color: var(--bone);
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: all .25s var(--t);
+    }
+    .devs-strip .devs-github:hover {
+      background: var(--terra);
+      border-color: var(--terra);
+      color: var(--bone);
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 rgba(250, 245, 232, .15);
+    }
+    .devs-strip .devs-github svg {
+      width: 16px; height: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .devs-strip { flex-direction: column; align-items: flex-start; padding: 1.5rem 1rem; }
+      .devs-strip .devs-github { width: 100%; justify-content: center; }
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(250, 245, 232, .1);
+      padding: 1.25rem 1.5rem;
+    }
+    .footer-bottom-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: rgba(250, 245, 232, .4);
+      letter-spacing: .03em;
+    }
+    .footer-bottom a:hover { color: var(--bone); }
+    .legal-nav ul { display: flex; gap: 1.5rem; }
+
+    /* Crédito da IA — pílula sutil */
+    .ai-credit {
+      display: inline-flex !important;
+      align-items: center;
+      gap: .45rem;
+      font-family: var(--mono);
+      font-size: .65rem !important;
+      letter-spacing: .04em;
+      color: rgba(250, 245, 232, .4) !important;
+      padding: .35rem .85rem;
+      border: 1px solid rgba(250, 245, 232, .12);
+      border-radius: 99px;
+      transition: all .3s var(--t);
+    }
+    .ai-credit:hover {
+      color: rgba(250, 245, 232, .75) !important;
+      border-color: rgba(196, 77, 41, .45);
+    }
+    .ai-credit span {
+      color: var(--terra);
+      font-family: var(--serif);
+      font-size: .8rem;
+      line-height: 1;
+    }
+    .ai-credit i {
+      font-style: italic;
+      color: var(--terra);
+      font-family: var(--serif);
+      font-size: .82rem;
+      font-variation-settings: "SOFT" 100, "WONK" 1;
+    }
+
+    @media (max-width: 800px) {
+      .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: .85rem; }
+    }
+
+    /* ════════════════════════════════════════════════
+       RESPONSIVO
+    ═════════════════════════════════════════════════ */
+    @media (max-width: 1000px) {
+      .nav-principal ul { gap: 1.5rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-feature { grid-template-columns: 1fr; }
+      .feature-content { padding: 2rem 0 0; }
+      .section-header { grid-template-columns: 1fr; gap: 1.5rem; }
+      .produtos-grid { grid-template-columns: repeat(2, 1fr); }
+      .strip-categorias .container { grid-template-columns: repeat(2, 1fr); }
+      .strip-cat { border-bottom: 1px solid var(--line); }
+      .split-grid { grid-template-columns: 1fr; }
+      .split-text { padding: 3rem 0; border-right: none; border-bottom: 1px solid var(--ink); }
+      .split-numbers { padding: 3rem 0; }
+      .historias-grid { grid-template-columns: 1fr; }
+      .newsletter-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 800px) {
+      .nav-principal { display: none; }
+      .btn-menu { display: flex; }
+      .header-inner { padding: 1rem; gap: .5rem; grid-template-columns: auto auto auto; justify-content: space-between; }
+      .header-actions { gap: .25rem; }
+      .icon-btn { width: 44px; height: 44px; }
+    }
+
+    @media (max-width: 700px) {
+      .hero { padding: 2rem 0 3rem; }
+      .hero h1 { font-size: clamp(2.6rem, 11vw, 4.5rem); line-height: .98; }
+      .hero-side { padding-bottom: 0; }
+      .hero-feature { margin-top: 2.5rem; padding-top: 2rem; }
+      .feature-content { padding: 1.5rem 0 0; }
+      .feature-title { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+      .specs { grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1rem 0; }
+      .specs dd { font-size: 1.15rem; }
+      .feature-price { gap: .75rem; flex-direction: column; align-items: flex-start; }
+      .feature-price .btn { margin-left: 0 !important; width: 100%; justify-content: center; }
+      .price-big { font-size: 1.85rem; }
+
+      .strip-categorias .container { grid-template-columns: 1fr; }
+      .strip-cat { border-right: none; border-bottom: 1px solid var(--line); padding: 1rem; }
+      .strip-cat:last-child { border-bottom: none; }
+
+      .produtos-grid { grid-template-columns: 1fr; border-left: 1px solid var(--ink); }
+      .produto { padding: 1rem; }
+
+      .split-text { padding: 2.5rem 0; }
+      .split-text h2 { font-size: 1.85rem; max-width: none; }
+      .split-text p.lead { font-size: 1.05rem; }
+      .split-numbers {
+        padding: 2.5rem 0;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 1rem;
+      }
+      .num-block .big { font-size: clamp(2.2rem, 11vw, 3.5rem); }
+
+      .historia.featured h3 { font-size: 1.7rem; }
+
+      .newsletter-section { padding: 3rem 0; }
+      .newsletter-form { flex-wrap: wrap; gap: .5rem; padding-bottom: .5rem; }
+      .newsletter-form input { font-size: 1rem; padding: .85rem 0; min-width: 0; flex: 1; }
+      .newsletter-form button { padding: .85rem 1rem; }
+
+      section { padding: 3rem 0; }
+
+      .ticker-track { gap: 2.5rem; }
+      .ticker { font-size: .68rem; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 1rem; }
+      .header-inner { padding: .85rem 1rem; }
+      .brand a { font-size: 1.5rem; }
+      .brand-tag { font-size: .6rem; }
+      .header-actions { gap: 0; }
+      .icon-btn { width: 40px; }
+
+      .hero h1 { font-size: clamp(2.2rem, 12vw, 3.5rem); }
+      .hero-lead { font-size: .95rem; margin-bottom: 1.5rem; }
+
+      .specs { grid-template-columns: 1fr; gap: .75rem; }
+      .specs dd { font-size: 1.1rem; }
+
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 0 1rem 2rem; }
+      .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .legal-nav ul { flex-wrap: wrap; gap: 1rem; }
+
+      .a11y-fab { width: 48px; height: 48px; bottom: 1rem; right: 1rem; }
+      .a11y-panel {
+        width: calc(100vw - 1.5rem);
+        right: .75rem; left: .75rem;
+        bottom: 4.75rem;
+        padding: 1.25rem;
+      }
+    }
+
+    /* TOASTS */
+    .toast-container { position: fixed; top: 5rem; right: 1.5rem; z-index: 9500; display: flex; flex-direction: column; gap: .5rem; pointer-events: none; }
+    .toast { background: var(--ink); color: var(--bone); padding: .85rem 1.25rem; border-left: 3px solid var(--terra); box-shadow: 0 12px 32px rgba(0,0,0,.25); font-family: var(--sans); font-size: .85rem; min-width: 240px; max-width: 360px; pointer-events: auto; opacity: 0; transform: translateX(20px); animation: toastIn .3s var(--t) forwards; display: flex; align-items: center; gap: .75rem; }
+    .toast::before { content: '✓'; color: var(--terra); font-size: 1.1rem; font-family: var(--serif); font-weight: bold; }
+    .toast.removing { animation: toastOut .3s var(--t) forwards; }
+    @keyframes toastIn { to { opacity: 1; transform: translateX(0); } }
+    @keyframes toastOut { to { opacity: 0; transform: translateX(20px); } }
+
+    /* SEARCH OVERLAY */
+    .search-overlay { position: fixed; inset: 0; background: rgba(244, 237, 224, .98); backdrop-filter: blur(20px); z-index: 950; opacity: 0; pointer-events: none; transition: opacity .3s var(--t); padding: 8vh 1.5rem 2rem; overflow-y: auto; }
+    .search-overlay[aria-hidden="false"] { opacity: 1; pointer-events: auto; }
+    .search-inner { max-width: 760px; margin: 0 auto; position: relative; }
+    .search-close { position: absolute; top: 0; right: 0; width: 44px; height: 44px; background: transparent; border: 1px solid var(--ink); cursor: pointer; font-size: 1.1rem; color: var(--ink); }
+    .search-close:hover { background: var(--ink); color: var(--bone); }
+    .search-overlay form { margin-top: 3rem; }
+    .search-overlay label { font-family: var(--mono); font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--terra); display: block; margin-bottom: .75rem; }
+    .search-overlay input { width: 100%; background: transparent; border: none; border-bottom: 2px solid var(--ink); padding: 1rem 0; font-family: var(--serif); font-size: clamp(1.5rem, 4vw, 2.5rem); color: var(--ink); outline: none; font-variation-settings: "SOFT" 50, "WONK" 1; }
+    .search-overlay input:focus { border-bottom-color: var(--terra); }
+    .search-overlay input::placeholder { color: var(--ink-mute); font-style: italic; }
+    .search-results { margin-top: 2rem; display: grid; gap: .5rem; }
+    .search-result-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: rgba(26, 20, 14, .04); border: 1px solid var(--line); cursor: pointer; transition: all .25s var(--t); }
+    .search-result-item:hover { background: var(--ink); color: var(--bone); transform: translateX(4px); }
+    .search-result-item h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; font-variation-settings: "SOFT" 30, "WONK" 1; }
+    .search-cat { font-family: var(--mono); font-size: .68rem; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .04em; }
+    .search-result-item:hover .search-cat { color: var(--terra); }
+    .search-suggestions { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+    .search-suggestions span { font-family: var(--mono); font-size: .68rem; color: var(--ink-mute); letter-spacing: .04em; text-transform: uppercase; margin-right: .5rem; }
+    .search-suggestions button { background: transparent; border: 1px solid var(--line); padding: .35rem .75rem; font-family: var(--mono); font-size: .72rem; cursor: pointer; color: var(--ink-soft); transition: all .2s; }
+    .search-suggestions button:hover { border-color: var(--terra); color: var(--terra); }
+
+    /* CART DRAWER */
+    .cart-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, .35); z-index: 940; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .cart-overlay[aria-hidden="false"] { opacity: 1; pointer-events: auto; }
+    .cart-drawer { position: fixed; top: 0; right: 0; width: 100%; max-width: 420px; height: 100vh; background: var(--paper); z-index: 950; transform: translateX(100%); transition: transform .35s var(--t); display: flex; flex-direction: column; box-shadow: -10px 0 40px rgba(0,0,0,.2); }
+    .cart-drawer[aria-hidden="false"] { transform: translateX(0); }
+    .cart-header { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--ink); }
+    .cart-header h2 { font-family: var(--serif); font-size: 1.6rem; font-variation-settings: "SOFT" 50, "WONK" 1; }
+    .cart-header h2 i { color: var(--terra); font-style: italic; }
+    .cart-close { width: 36px; height: 36px; background: transparent; border: 1px solid var(--ink); cursor: pointer; font-size: 1rem; }
+    .cart-close:hover { background: var(--ink); color: var(--bone); }
+    .cart-body { flex: 1; overflow-y: auto; padding: 1.5rem; }
+    .cart-empty { text-align: center; padding: 3rem 1rem; font-family: var(--mono); font-size: .85rem; color: var(--ink-mute); }
+    .cart-empty .empty-icon { font-size: 3rem; display: block; margin-bottom: 1rem; opacity: .4; }
+    .cart-item { display: grid; grid-template-columns: 60px 1fr auto; gap: 1rem; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .cart-item-img { width: 60px; height: 60px; background: var(--paper-dark); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+    .cart-item-info h4 { font-family: var(--serif); font-size: .92rem; margin-bottom: .15rem; font-variation-settings: "SOFT" 30, "WONK" 1; }
+    .cart-item-info p { font-family: var(--mono); font-size: .7rem; color: var(--ink-mute); }
+    .cart-item-price { text-align: right; font-family: var(--serif); font-size: .95rem; font-variation-settings: "SOFT" 30, "WONK" 1; }
+    .cart-remove { background: transparent; border: none; color: var(--ink-mute); font-size: .68rem; cursor: pointer; margin-top: .25rem; padding: 0; font-family: var(--mono); letter-spacing: .03em; text-transform: uppercase; }
+    .cart-remove:hover { color: var(--warning); text-decoration: underline; }
+    .cart-footer { padding: 1.5rem; border-top: 1px solid var(--ink); background: var(--paper-dark); }
+    .cart-total { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; }
+    .cart-total .label { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-mute); }
+    .cart-total .total-value { font-family: var(--serif); font-size: 1.7rem; font-variation-settings: "SOFT" 50, "WONK" 1; }
+    .cart-checkout { width: 100%; background: var(--ink); color: var(--bone); border: none; padding: 1rem; font-family: var(--mono); font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; cursor: pointer; transition: all .25s var(--t); }
+    .cart-checkout:hover { background: var(--terra); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+
+    /* QUICK VIEW MODAL */
+    .qv-overlay { position: fixed; inset: 0; background: rgba(26, 20, 14, .6); z-index: 960; opacity: 0; pointer-events: none; transition: opacity .3s; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .qv-overlay[aria-hidden="false"] { opacity: 1; pointer-events: auto; }
+    .qv-modal { background: var(--paper); width: 100%; max-width: 720px; max-height: 90vh; overflow-y: auto; display: grid; grid-template-columns: 1fr 1fr; transform: scale(.95); transition: transform .3s var(--t); }
+    .qv-overlay[aria-hidden="false"] .qv-modal { transform: scale(1); }
+    .qv-img { background: var(--ink); display: flex; align-items: center; justify-content: center; min-height: 320px; }
+    .qv-img svg { width: 60%; height: 60%; }
+    .qv-info { padding: 2rem; position: relative; display: flex; flex-direction: column; }
+    .qv-close { position: absolute; top: 1rem; right: 1rem; width: 32px; height: 32px; background: transparent; border: 1px solid var(--ink); cursor: pointer; font-size: .9rem; }
+    .qv-close:hover { background: var(--ink); color: var(--bone); }
+    .qv-cat { font-family: var(--mono); font-size: .68rem; color: var(--terra); text-transform: uppercase; letter-spacing: .04em; margin-bottom: .65rem; }
+    .qv-info h2 { font-family: var(--serif); font-size: 1.85rem; line-height: 1; margin-bottom: .85rem; font-variation-settings: "SOFT" 30, "WONK" 1; }
+    .qv-desc { color: var(--ink-soft); font-size: .9rem; line-height: 1.55; margin-bottom: 1.25rem; }
+    .qv-specs { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 1.25rem; }
+    .qv-specs dt { font-family: var(--mono); font-size: .65rem; color: var(--ink-mute); text-transform: uppercase; }
+    .qv-specs dd { font-family: var(--serif); font-size: 1rem; font-variation-settings: "SOFT" 30, "WONK" 1; }
+    .qv-price { font-family: var(--serif); font-size: 2rem; margin-bottom: 1rem; font-variation-settings: "SOFT" 50, "WONK" 1; }
+    .qv-price .m { font-size: .85rem; color: var(--ink-mute); font-family: var(--mono); margin-right: .25rem; }
+    .qv-actions { display: flex; gap: .5rem; margin-top: auto; }
+    @media (max-width: 600px) {
+      .qv-modal { grid-template-columns: 1fr; }
+      .qv-img { min-height: 200px; }
+      .qv-info { padding: 1.5rem; }
+    }
+
+    /* MICRO-INTERAÇÕES */
+    .produto { cursor: pointer; }
+    .produto:active { transform: scale(.99); }
+    .btn:active { transform: translate(0, 0) scale(.98); }
+    .icon-btn:active { transform: scale(.92); }
+    .a11y-btn:active { transform: scale(.96); }
+    .badge.bump { animation: bump .35s var(--t); }
+    @keyframes bump { 0% { transform: scale(1); } 50% { transform: scale(1.5); background: var(--moss); } 100% { transform: scale(1); } }
+
+    /* ════════════════════════════════════════════════
+       ⭐ WIDGET DE ACESSIBILIDADE
+       Mantém o look dark contra o paper claro
+    ═════════════════════════════════════════════════ */
+    .a11y-fab {
+      position: fixed;
+      bottom: 1.5rem; right: 1.5rem;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--bone);
+      border: 2px solid var(--ink);
+      cursor: pointer;
+      z-index: 9000;
+      box-shadow: 0 8px 24px rgba(26,20,14,.35), 0 0 0 0 rgba(196,77,41,.5);
+      display: flex; align-items: center; justify-content: center;
+      transition: all .25s var(--t);
+      animation: a11y-pulse 2.8s ease-in-out infinite;
+    }
+    .a11y-fab:hover {
+      background: var(--terra);
+      border-color: var(--terra);
+      transform: scale(1.06);
+    }
+    .a11y-fab:focus-visible { outline: 3px solid var(--terra); outline-offset: 4px; }
+
+    @keyframes a11y-pulse {
+      0%, 100% { box-shadow: 0 8px 24px rgba(26,20,14,.35), 0 0 0 0 rgba(196,77,41,.5); }
+      50%      { box-shadow: 0 8px 24px rgba(26,20,14,.35), 0 0 0 14px rgba(196,77,41,0); }
+    }
+    @media (prefers-reduced-motion: reduce) { .a11y-fab { animation: none; } }
+
+    .a11y-panel {
+      position: fixed;
+      bottom: 6rem; right: 1.5rem;
+      width: 360px;
+      max-height: 80vh;
+      overflow-y: auto;
+      background: var(--ink);
+      color: var(--bone);
+      border: 1px solid var(--ink);
+      box-shadow: 0 25px 60px rgba(26,20,14,.5);
+      z-index: 8999;
+      transform: translateY(20px) scale(.96);
+      opacity: 0;
+      pointer-events: none;
+      transition: all .3s var(--t);
+      padding: 1.5rem;
+    }
+    .a11y-panel[aria-hidden="false"] {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .a11y-panel::-webkit-scrollbar { width: 5px; }
+    .a11y-panel::-webkit-scrollbar-thumb { background: var(--terra); }
+
+    .a11y-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 1rem; margin-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(250, 245, 232, .15);
+    }
+    .a11y-header h2 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--bone);
+      font-variation-settings: "SOFT" 100, "WONK" 1;
+    }
+    .a11y-header h2 i {
+      color: var(--terra);
+      font-style: italic;
+    }
+    .a11y-close {
+      background: transparent;
+      border: 1px solid rgba(250, 245, 232, .3);
+      color: var(--bone);
+      width: 32px; height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+    .a11y-close:hover { background: var(--terra); border-color: var(--terra); }
+
+    .a11y-section { margin-bottom: 1.25rem; }
+    .a11y-section-title {
+      font-family: var(--mono);
+      font-size: .65rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: .65rem;
+    }
+    .a11y-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .4rem;
+    }
+    .a11y-grid.col-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .a11y-grid.col-1 { grid-template-columns: 1fr; }
+
+    .a11y-btn {
+      background: rgba(250, 245, 232, .05);
+      border: 1px solid rgba(250, 245, 232, .12);
+      color: var(--bone);
+      padding: .75rem .5rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: .76rem;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .35rem;
+      transition: all .2s;
+      min-height: 64px;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .a11y-btn:hover {
+      background: rgba(250, 245, 232, .12);
+      border-color: rgba(196, 77, 41, .5);
+    }
+    .a11y-btn:focus-visible { outline: 2px solid var(--terra); outline-offset: 2px; }
+    .a11y-btn[aria-pressed="true"] {
+      background: var(--terra);
+      border-color: var(--terra);
+      color: var(--bone);
+    }
+    .a11y-btn[aria-pressed="true"] .a11y-icon { color: var(--bone); }
+    .a11y-icon {
+      font-size: 1.25rem;
+      color: var(--terra);
+      line-height: 1;
+      font-family: var(--serif);
+    }
+
+    .a11y-reset {
+      background: transparent;
+      border: 1px solid rgba(184, 64, 30, .5);
+      color: #ff8866;
+      width: 100%;
+      padding: .75rem;
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .a11y-reset:hover {
+      background: rgba(184, 64, 30, .15);
+      color: #ffaa88;
+    }
+
+    .a11y-info {
+      font-family: var(--mono);
+      font-size: .65rem;
+      color: rgba(250, 245, 232, .4);
+      text-align: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(250, 245, 232, .08);
+      letter-spacing: .03em;
+    }
+
+    /* ─── Modos aplicados ─── */
+    html.a11y-font-lg  { font-size: 18px; }
+    html.a11y-font-xl  { font-size: 20px; }
+    html.a11y-font-xxl { font-size: 22px; }
+    html.a11y-font-sm  { font-size: 14px; }
+
+    html.a11y-high-contrast {
+      filter: contrast(1.4) brightness(1.05);
+    }
+    html.a11y-high-contrast body {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    html.a11y-high-contrast :root {
+      --paper: #fff; --paper-dark: #f0f0f0;
+      --ink: #000; --ink-soft: #000; --ink-mute: #222;
+      --terra: #d40000; --line: #000; --bone: #fff;
+    }
+
+    html.a11y-invert { filter: invert(1) hue-rotate(180deg); }
+    html.a11y-invert img, html.a11y-invert svg { filter: invert(1) hue-rotate(180deg); }
+
+    html.a11y-grayscale { filter: grayscale(1); }
+
+    html.a11y-underline a {
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+      text-decoration-color: var(--terra) !important;
+    }
+
+    html.a11y-letter-spacing * {
+      letter-spacing: .12em !important;
+      word-spacing: .16em !important;
+      line-height: 1.85 !important;
+    }
+
+    html.a11y-dyslexia, html.a11y-dyslexia * {
+      font-family: 'Verdana', 'Tahoma', sans-serif !important;
+      letter-spacing: .05em !important;
+      line-height: 1.8 !important;
+    }
+
+    html.a11y-big-cursor, html.a11y-big-cursor * {
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 32 32'><polygon points='8,4 8,28 14,22 18,28 22,26 18,20 25,20' fill='%23c44d29' stroke='%23000' stroke-width='1.5'/></svg>") 8 4, auto !important;
+    }
+
+    html.a11y-no-animation *, html.a11y-no-animation *::before, html.a11y-no-animation *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+
+    html.a11y-reader-mode *:hover {
+      outline: 2px solid var(--terra) !important;
+      cursor: help !important;
+    }
+
+    @media (max-width: 600px) {
+      .a11y-panel { width: calc(100vw - 2rem); right: 1rem; bottom: 5rem; }
+      .a11y-fab { width: 50px; height: 50px; bottom: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+  <div id="aria-live-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Botão de Acessibilidade -->
+  <button type="button" class="a11y-fab" id="a11y-fab"
+          aria-label="Abrir opções de acessibilidade"
+          aria-expanded="false" aria-controls="a11y-panel"
+          onclick="toggleA11yPanel()">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="12" cy="3.5" r="1.8"/>
+      <path d="M12 6.5c-1.8 0-4 .5-6 1.2v2.4c1.5-.4 3-.7 4.3-.85V21h1.7v-5.5h.3v5.5h1.7V9.25c1.3.15 2.8.45 4.3.85V7.7c-2-.7-4.2-1.2-6-1.2z"/>
+    </svg>
+  </button>
+
+  <aside class="a11y-panel" id="a11y-panel" role="dialog" aria-modal="false" aria-labelledby="a11y-titulo" aria-hidden="true">
+    <header class="a11y-header">
+      <h2 id="a11y-titulo">Acessibili<i>dade</i></h2>
+      <button type="button" class="a11y-close" aria-label="Fechar painel" onclick="toggleA11yPanel()">✕</button>
+    </header>
+    <div class="a11y-section">
+      <h3 class="a11y-section-title">Tamanho da fonte</h3>
+      <div class="a11y-grid col-3">
+        <button type="button" class="a11y-btn" data-action="font-decrease" aria-label="Diminuir fonte">
+          <span class="a11y-icon">A−</span><span>Menor</span>
+        </button>
+        <button type="button" class="a11y-btn" data-action="font-default" aria-label="Fonte padrão" aria-pressed="true">
+          <span class="a11y-icon">A</span><span>Padrão</span>
+        </button>
+        <button type="button" class="a11y-btn" data-action="font-increase" aria-label="Aumentar fonte">
+          <span class="a11y-icon">A+</span><span>Maior</span>
+        </button>
+      </div>
+    </div>
+    <div class="a11y-section">
+      <h3 class="a11y-section-title">Visualização</h3>
+      <div class="a11y-grid">
+        <button type="button" class="a11y-btn" data-toggle="a11y-high-contrast" aria-pressed="false">
+          <span class="a11y-icon">◐</span><span>Alto contraste</span>
+        </button>
+        <button type="button" class="a11y-btn" data-toggle="a11y-invert" aria-pressed="false">
+          <span class="a11y-icon">◑</span><span>Inverter cores</span>
+        </button>
+        <button type="button" class="a11y-btn" data-toggle="a11y-grayscale" aria-pressed="false">
+          <span class="a11y-icon">⬤</span><span>Escala cinza</span>
+        </button>
+        <button type="button" class="a11y-btn" data-toggle="a11y-underline" aria-pressed="false">
+          <span class="a11y-icon">_</span><span>Sublinhar links</span>
+        </button>
+      </div>
+    </div>
+    <div class="a11y-section">
+      <h3 class="a11y-section-title">Leitura</h3>
+      <div class="a11y-grid">
+        <button type="button" class="a11y-btn" data-toggle="a11y-letter-spacing" aria-pressed="false">
+          <span class="a11y-icon">↔</span><span>Espaçamento</span>
+        </button>
+        <button type="button" class="a11y-btn" data-toggle="a11y-dyslexia" aria-pressed="false">
+          <span class="a11y-icon">📖</span><span>Modo dislexia</span>
+        </button>
+        <button type="button" class="a11y-btn" data-toggle="a11y-big-cursor" aria-pressed="false">
+          <span class="a11y-icon">➤</span><span>Cursor grande</span>
+        </button>
+        <button type="button" class="a11y-btn" data-toggle="a11y-no-animation" aria-pressed="false">
+          <span class="a11y-icon">⏸</span><span>Pausar animações</span>
+        </button>
+      </div>
+    </div>
+    <div class="a11y-section">
+      <h3 class="a11y-section-title">Leitor de tela</h3>
+      <div class="a11y-grid col-1">
+        <button type="button" class="a11y-btn" data-toggle="a11y-reader-mode" aria-pressed="false">
+          <span class="a11y-icon">🔊</span><span>Ativar leitor de voz</span>
+        </button>
+      </div>
+      <p style="font-family: var(--mono); font-size: .65rem; color: rgba(250,245,232,.5); margin-top: .5rem; text-align: center;">
+        Passe o mouse sobre qualquer texto para ouvi-lo
+      </p>
+    </div>
+    <div class="a11y-section">
+      <button type="button" class="a11y-reset" onclick="resetarA11y()">↻ Restaurar padrões</button>
+    </div>
+    <p class="a11y-info">Preferências salvas neste navegador</p>
+  </aside>
+
+  <!-- ═══ TICKER ═══ -->
+  <div class="ticker" role="complementary" aria-label="Avisos">
+    <div class="ticker-track">
+      <span class="ticker-item">Frete grátis acima de R$ 1.500</span>
+      <span class="ticker-item">Garantia estendida em todos os drones</span>
+      <span class="ticker-item">Suporte técnico 7 dias</span>
+      <span class="ticker-item">12x sem juros no cartão</span>
+      <span class="ticker-item">Loja física em São Paulo</span>
+      <span class="ticker-item">Novidade: Stark Eco 2 já disponível</span>
+      <!-- Duplica para loop -->
+      <span class="ticker-item">Frete grátis acima de R$ 1.500</span>
+      <span class="ticker-item">Garantia estendida em todos os drones</span>
+      <span class="ticker-item">Suporte técnico 7 dias</span>
+      <span class="ticker-item">12x sem juros no cartão</span>
+      <span class="ticker-item">Loja física em São Paulo</span>
+      <span class="ticker-item">Novidade: Stark Eco 2 já disponível</span>
+    </div>
+  </div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="#" aria-label="Arngren — Página inicial">
+          Arn<span>gren</span><br>
+          <span class="brand-tag">desde 1983</span>
+        </a>
+      </div>
+
+      <nav class="nav-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#oficina">Oficina</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn" aria-label="Buscar produtos">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+          </svg>
+        </button>
+        <button type="button" class="icon-btn" aria-label="Minha conta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/>
+          </svg>
+        </button>
+        <button type="button" class="icon-btn" aria-label="Sacola com 2 itens">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/>
+          </svg>
+          <span class="badge" aria-hidden="true">2</span>
+        </button>
+
+        <!-- Hamburger (só aparece em mobile) -->
+        <button
+          type="button"
+          class="btn-menu"
+          id="btn-menu"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          onclick="toggleMobileMenu()">
+          <span class="ham-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Drawer mobile -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true" onclick="toggleMobileMenu()"></div>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-label="Menu mobile" aria-hidden="true">
+    <h2>Navegação</h2>
+    <ul>
+      <li><a href="#catalogo" onclick="toggleMobileMenu()">Catálogo</a></li>
+      <li><a href="#destaques" onclick="toggleMobileMenu()">Destaques</a></li>
+      <li><a href="#historia" onclick="toggleMobileMenu()">História</a></li>
+      <li><a href="#oficina" onclick="toggleMobileMenu()">Oficina</a></li>
+      <li><a href="#contato" onclick="toggleMobileMenu()">Contato</a></li>
+    </ul>
+    <h2>Categorias</h2>
+    <ul>
+      <li><a href="#catalogo" onclick="toggleMobileMenu()">Drones</a></li>
+      <li><a href="#catalogo" onclick="toggleMobileMenu()">E-bikes</a></li>
+      <li><a href="#catalogo" onclick="toggleMobileMenu()">Scooters</a></li>
+      <li><a href="#catalogo" onclick="toggleMobileMenu()">Modelismo</a></li>
+    </ul>
+    <p class="mobile-drawer-info">
+      <strong>Loja física:</strong><br>
+      São Paulo · Rio · Curitiba<br><br>
+      <strong>Suporte:</strong><br>
+      Seg–Sex 9h–18h
+    </p>
+  </nav>
+
+  <main id="conteudo">
+
+    <!-- ═══ HERO EDITORIAL ═══ -->
+    <section class="hero" aria-label="Apresentação">
+      <div class="hero-grid">
+        <div>
+          <p class="hero-meta">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Edição #142</span>
+            <span>•</span>
+            <span>Maio 2026</span>
+          </p>
+          <h1>
+            Catálogo<br>
+            de <span class="terra"><i>vôo,</i></span><br>
+            <span class="terra"><i>roda</i></span> e<br>
+            transmissão.<sup>★</sup>
+          </h1>
+        </div>
+        <div class="hero-side">
+          <p class="hero-lead">
+            Drones, bicicletas elétricas, scooters e modelismo de controle remoto. Curadoria honesta, suporte de quem entende, e — quando você precisar — peça de reposição em estoque.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+            <a href="#oficina" class="btn btn-ghost">Falar com a oficina</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto destaque editorial -->
+      <div class="hero-feature">
+        <div class="feature-img">
+          <!-- Drone SVG cinematográfico -->
+          <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DJI Mavic 4 Pro: drone profissional em vista de três quartos">
+            <defs>
+              <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a140e"/>
+                <stop offset="100%" stop-color="#3a2820"/>
+              </linearGradient>
+              <linearGradient id="armC" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2a2018"/>
+                <stop offset="100%" stop-color="#0a0604"/>
+              </linearGradient>
+              <radialGradient id="lensC">
+                <stop offset="0%" stop-color="#c44d29"/>
+                <stop offset="40%" stop-color="#3a1810"/>
+                <stop offset="100%" stop-color="#0a0604"/>
+              </radialGradient>
+            </defs>
+            <rect width="600" height="450" fill="url(#bg1)"/>
+
+            <!-- Grid pattern de fundo -->
+            <g opacity=".08" stroke="#f4ede0" stroke-width=".5">
+              <line x1="0" y1="100" x2="600" y2="100"/>
+              <line x1="0" y1="200" x2="600" y2="200"/>
+              <line x1="0" y1="300" x2="600" y2="300"/>
+              <line x1="100" y1="0" x2="100" y2="450"/>
+              <line x1="200" y1="0" x2="200" y2="450"/>
+              <line x1="300" y1="0" x2="300" y2="450"/>
+              <line x1="400" y1="0" x2="400" y2="450"/>
+              <line x1="500" y1="0" x2="500" y2="450"/>
+            </g>
+
+            <!-- Glow sutil -->
+            <ellipse cx="300" cy="225" rx="200" ry="80" fill="#c44d29" opacity=".08"/>
+
+            <!-- Braços do drone -->
+            <g stroke-linecap="round">
+              <line x1="170" y1="180" x2="245" y2="220" stroke="url(#armC)" stroke-width="14"/>
+              <line x1="430" y1="180" x2="355" y2="220" stroke="url(#armC)" stroke-width="14"/>
+              <line x1="170" y1="270" x2="245" y2="230" stroke="url(#armC)" stroke-width="14"/>
+              <line x1="430" y1="270" x2="355" y2="230" stroke="url(#armC)" stroke-width="14"/>
+            </g>
+
+            <!-- Hélices -->
+            <g opacity=".7">
+              <ellipse cx="170" cy="180" rx="60" ry="6" fill="none" stroke="#c44d29" stroke-width="1"/>
+              <ellipse cx="430" cy="180" rx="60" ry="6" fill="none" stroke="#c44d29" stroke-width="1"/>
+              <ellipse cx="170" cy="270" rx="60" ry="6" fill="none" stroke="#c44d29" stroke-width="1"/>
+              <ellipse cx="430" cy="270" rx="60" ry="6" fill="none" stroke="#c44d29" stroke-width="1"/>
+            </g>
+
+            <!-- Motores -->
+            <circle cx="170" cy="180" r="14" fill="#0a0604" stroke="#c44d29" stroke-width="1.5"/>
+            <circle cx="430" cy="180" r="14" fill="#0a0604" stroke="#c44d29" stroke-width="1.5"/>
+            <circle cx="170" cy="270" r="14" fill="#0a0604" stroke="#c44d29" stroke-width="1.5"/>
+            <circle cx="430" cy="270" r="14" fill="#0a0604" stroke="#c44d29" stroke-width="1.5"/>
+
+            <!-- Corpo -->
+            <ellipse cx="300" cy="225" rx="100" ry="62" fill="#1a140e" stroke="#3a2820" stroke-width="1"/>
+            <rect x="220" y="200" width="160" height="50" rx="3" fill="#0a0604"/>
+
+            <!-- Lente da câmera -->
+            <circle cx="300" cy="245" r="28" fill="url(#lensC)"/>
+            <circle cx="300" cy="245" r="20" fill="#0a0604"/>
+            <circle cx="300" cy="245" r="14" fill="#1a0a04"/>
+            <circle cx="293" cy="238" r="4" fill="#c44d29" opacity=".6"/>
+
+            <!-- LEDs -->
+            <circle cx="252" cy="218" r="3" fill="#4a5d3a"/>
+            <circle cx="348" cy="218" r="3" fill="#c44d29"/>
+
+            <!-- Label técnico -->
+            <text x="40" y="40" font-family="JetBrains Mono, monospace" font-size="11" fill="#f4ede0" opacity=".55">MAVIC 4 PRO • REC 8K</text>
+            <text x="40" y="425" font-family="JetBrains Mono, monospace" font-size="10" fill="#f4ede0" opacity=".4">f/2.8 — 1/250 — ISO 100</text>
+            <text x="500" y="425" font-family="JetBrains Mono, monospace" font-size="10" fill="#c44d29" opacity=".7">●REC</text>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <p class="feature-tag">Lançamento da semana / Estoque limitado</p>
+          <h2 class="feature-title">DJI Mavic <i>4 Pro</i></h2>
+          <p class="feature-desc">
+            O sucessor do Mavic 3 chega com sensor de 4/3", gravação 8K HDR e sistema de detecção omnidirecional. Bateria de 51 minutos. Pronto para entrega.
+          </p>
+
+          <dl class="specs">
+            <div>
+              <dt>Alcance</dt>
+              <dd>15 <span class="un">km</span></dd>
+            </div>
+            <div>
+              <dt>Bateria</dt>
+              <dd>51 <span class="un">min</span></dd>
+            </div>
+            <div>
+              <dt>Sensor</dt>
+              <dd>4/3 <span class="un">CMOS</span></dd>
+            </div>
+            <div>
+              <dt>Peso</dt>
+              <dd>958 <span class="un">g</span></dd>
+            </div>
+          </dl>
+
+          <div class="feature-price">
+            <span class="price-big"><span class="moeda">R$</span>23.490</span>
+            <span class="price-cond">ou 12× R$ 2.090 sem juros</span>
+            <a href="#" class="btn btn-primary" style="margin-left: auto;">Comprar agora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ STRIP DE CATEGORIAS ═══ -->
+    <nav class="strip-categorias" aria-label="Atalhos de categorias">
+      <div class="container">
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>01</i></span> Drones</a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>02</i></span> E-bikes</a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>03</i></span> Scooters</a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>04</i></span> Modelismo</a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>05</i></span> Peças</a>
+      </div>
+    </nav>
+
+    <!-- ═══ CATÁLOGO ═══ -->
+    <section id="catalogo" aria-label="Catálogo de produtos">
+      <header class="section-header">
+        <div>
+          <span class="section-num">§ 01 — Catálogo</span>
+          <h2 class="section-title">No <i>estoque</i> esta semana.</h2>
+        </div>
+        <p class="section-intro">
+          Não trabalhamos com revenda em massa. Cada item passa pela <strong>oficina antes do envio</strong> — calibragem, firmware atualizado, teste em bancada.
+        </p>
+      </header>
+
+      <div class="produtos-grid">
+
+        <article class="produto">
+          <p class="produto-num">№ 01 / 06</p>
+          <div class="produto-img">
+            <span class="produto-tag tag-novo">Novo</span>
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Drone DJI Mini 5 Pro em vista frontal">
+              <g stroke="#1a140e" fill="none" stroke-linecap="round">
+                <line x1="60" y1="80" x2="95" y2="100" stroke-width="6"/>
+                <line x1="140" y1="80" x2="105" y2="100" stroke-width="6"/>
+                <line x1="60" y1="120" x2="95" y2="100" stroke-width="6"/>
+                <line x1="140" y1="120" x2="105" y2="100" stroke-width="6"/>
+              </g>
+              <ellipse cx="60" cy="80" rx="22" ry="3" fill="#c44d29" opacity=".4"/>
+              <ellipse cx="140" cy="80" rx="22" ry="3" fill="#c44d29" opacity=".4"/>
+              <ellipse cx="60" cy="120" rx="22" ry="3" fill="#c44d29" opacity=".4"/>
+              <ellipse cx="140" cy="120" rx="22" ry="3" fill="#c44d29" opacity=".4"/>
+              <circle cx="60" cy="80" r="6" fill="#1a140e"/>
+              <circle cx="140" cy="80" r="6" fill="#1a140e"/>
+              <circle cx="60" cy="120" r="6" fill="#1a140e"/>
+              <circle cx="140" cy="120" r="6" fill="#1a140e"/>
+              <ellipse cx="100" cy="100" rx="28" ry="20" fill="#1a140e"/>
+              <circle cx="100" cy="108" r="9" fill="#c44d29"/>
+              <circle cx="100" cy="108" r="5" fill="#1a140e"/>
+            </svg>
+          </div>
+          <p class="produto-cat">Drones</p>
+          <h3>DJI Mini 5 Pro</h3>
+          <p class="desc">Drone compacto de 249g com câmera 1" e gimbal 3 eixos. Não exige registro na ANAC.</p>
+          <div class="produto-foot">
+            <span class="produto-preco"><span class="m">R$</span>8.290</span>
+            <a href="#" class="produto-acao">Ver →</a>
+          </div>
+        </article>
+
+        <article class="produto">
+          <p class="produto-num">№ 02 / 06</p>
+          <div class="produto-img">
+            <span class="produto-tag tag-best">Mais vendida</span>
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bicicleta elétrica Stark Eco 2 vista de lado">
+              <g stroke="#1a140e" stroke-width="3" fill="none" stroke-linecap="round">
+                <circle cx="55" cy="135" r="32"/>
+                <circle cx="145" cy="135" r="32"/>
+                <line x1="55" y1="135" x2="100" y2="80"/>
+                <line x1="145" y1="135" x2="100" y2="80"/>
+                <line x1="100" y1="80" x2="120" y2="60"/>
+                <line x1="100" y1="80" x2="80" y2="60"/>
+                <line x1="55" y1="135" x2="100" y2="135"/>
+                <line x1="100" y1="135" x2="145" y2="135"/>
+              </g>
+              <rect x="80" y="110" width="40" height="20" fill="#c44d29" rx="2"/>
+              <circle cx="55" cy="135" r="6" fill="#1a140e"/>
+              <circle cx="145" cy="135" r="6" fill="#1a140e"/>
+            </svg>
+          </div>
+          <p class="produto-cat">E-bikes</p>
+          <h3>Stark Eco 2</h3>
+          <p class="desc">E-bike urbana com motor 500W central, autonomia de 80 km e quadro de alumínio.</p>
+          <div class="produto-foot">
+            <span class="produto-preco"><span class="m">R$</span>9.890</span>
+            <a href="#" class="produto-acao">Ver →</a>
+          </div>
+        </article>
+
+        <article class="produto">
+          <p class="produto-num">№ 03 / 06</p>
+          <div class="produto-img">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Helicóptero RC Helix Pro">
+              <g stroke="#1a140e" fill="none" stroke-linecap="round">
+                <line x1="40" y1="60" x2="160" y2="60" stroke-width="3"/>
+                <line x1="100" y1="58" x2="100" y2="80" stroke-width="2"/>
+                <ellipse cx="100" cy="105" rx="35" ry="22" fill="#1a140e" stroke="none"/>
+                <line x1="135" y1="105" x2="175" y2="100" stroke-width="3"/>
+                <line x1="170" y1="92" x2="170" y2="108" stroke-width="3"/>
+                <circle cx="92" cy="102" r="4" fill="#c44d29" stroke="none"/>
+              </g>
+              <line x1="60" y1="130" x2="140" y2="130" stroke="#1a140e" stroke-width="2"/>
+              <line x1="70" y1="130" x2="70" y2="140" stroke="#1a140e" stroke-width="2"/>
+              <line x1="130" y1="130" x2="130" y2="140" stroke="#1a140e" stroke-width="2"/>
+            </svg>
+          </div>
+          <p class="produto-cat">Modelismo</p>
+          <h3>Helix RC Pro</h3>
+          <p class="desc">Helicóptero 6 canais com motor brushless dual e estabilização ativa por giroscópio.</p>
+          <div class="produto-foot">
+            <span class="produto-preco"><span class="m">R$</span>3.490</span>
+            <a href="#" class="produto-acao">Ver →</a>
+          </div>
+        </article>
+
+        <article class="produto">
+          <p class="produto-num">№ 04 / 06</p>
+          <div class="produto-img">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scooter elétrica Volt SL vista de perfil">
+              <g stroke="#1a140e" fill="none" stroke-width="3" stroke-linecap="round">
+                <circle cx="50" cy="140" r="22"/>
+                <circle cx="150" cy="140" r="22"/>
+                <line x1="50" y1="140" x2="150" y2="140"/>
+                <line x1="150" y1="140" x2="160" y2="50"/>
+                <line x1="155" y1="50" x2="170" y2="50"/>
+                <line x1="155" y1="50" x2="145" y2="50"/>
+              </g>
+              <rect x="70" y="125" width="60" height="14" fill="#c44d29" rx="2"/>
+              <circle cx="50" cy="140" r="4" fill="#1a140e"/>
+              <circle cx="150" cy="140" r="4" fill="#1a140e"/>
+            </svg>
+          </div>
+          <p class="produto-cat">Scooters</p>
+          <h3>Volt SL Sapphire</h3>
+          <p class="desc">Scooter dobrável em alumínio aeroespacial. 65 km de autonomia, 45 km/h.</p>
+          <div class="produto-foot">
+            <span class="produto-preco"><span class="m">R$</span>6.490</span>
+            <a href="#" class="produto-acao">Ver →</a>
+          </div>
+        </article>
+
+        <article class="produto">
+          <p class="produto-num">№ 05 / 06</p>
+          <div class="produto-img">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hoverboard Glide Carbon visto de cima">
+              <ellipse cx="100" cy="105" rx="80" ry="20" fill="#1a140e"/>
+              <circle cx="40" cy="105" r="22" fill="none" stroke="#1a140e" stroke-width="3"/>
+              <circle cx="160" cy="105" r="22" fill="none" stroke="#1a140e" stroke-width="3"/>
+              <line x1="60" y1="105" x2="140" y2="105" stroke="#c44d29" stroke-width="3"/>
+              <circle cx="100" cy="105" r="4" fill="#c44d29"/>
+            </svg>
+          </div>
+          <p class="produto-cat">Mobilidade</p>
+          <h3>Glide Carbon X</h3>
+          <p class="desc">Hoverboard em fibra de carbono com auto-equilíbrio. Certificado UL 2272.</p>
+          <div class="produto-foot">
+            <span class="produto-preco"><span class="m">R$</span>4.890</span>
+            <a href="#" class="produto-acao">Ver →</a>
+          </div>
+        </article>
+
+        <article class="produto">
+          <p class="produto-num">№ 06 / 06</p>
+          <div class="produto-img">
+            <span class="produto-tag tag-novo">Pré-venda</span>
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quadricóptero racing FPV em vista de três quartos">
+              <g stroke="#1a140e" fill="none" stroke-width="6" stroke-linecap="round">
+                <line x1="55" y1="65" x2="100" y2="100"/>
+                <line x1="145" y1="65" x2="100" y2="100"/>
+                <line x1="55" y1="135" x2="100" y2="100"/>
+                <line x1="145" y1="135" x2="100" y2="100"/>
+              </g>
+              <rect x="85" y="85" width="30" height="30" fill="#1a140e" rx="2"/>
+              <circle cx="100" cy="100" r="6" fill="#c44d29"/>
+              <circle cx="55" cy="65" r="10" fill="#1a140e"/>
+              <circle cx="145" cy="65" r="10" fill="#1a140e"/>
+              <circle cx="55" cy="135" r="10" fill="#1a140e"/>
+              <circle cx="145" cy="135" r="10" fill="#1a140e"/>
+            </svg>
+          </div>
+          <p class="produto-cat">Drones FPV</p>
+          <h3>Falcon FPV 5"</h3>
+          <p class="desc">Quadricóptero racing 5 polegadas. Frame em fibra de carbono, motor 2207, ESC 60A.</p>
+          <div class="produto-foot">
+            <span class="produto-preco"><span class="m">R$</span>2.890</span>
+            <a href="#" class="produto-acao">Ver →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ═══ SPLIT — HISTÓRIA + NÚMEROS ═══ -->
+    <section id="historia" class="split-section" aria-label="Sobre a Arngren">
+      <div class="split-grid">
+        <div class="split-text">
+          <span class="section-num">§ 02 — Sobre nós</span>
+          <h2>Loja antiga, <i>cabeça</i> nova.</h2>
+          <p class="lead">
+            Começamos em 1983 vendendo trens elétricos numa loja no centro de São Paulo. Quatro décadas depois, ainda somos os mesmos.
+          </p>
+          <p>
+            Hoje vendemos drones, e-bikes e modelismo — mas continuamos atendendo cliente por nome, recomendando o que serve em vez do que dá mais comissão, e abrindo a oficina pra resolver problema na hora.
+          </p>
+          <p>
+            Não competimos por preço com marketplace. Competimos por confiança.
+          </p>
+          <a href="#contato" class="btn btn-ghost" style="margin-top: 1rem;">Conheça a equipe</a>
+        </div>
+        <div class="split-numbers">
+          <div class="num-block">
+            <p class="big"><i>42</i> anos</p>
+            <p class="label">Em operação contínua</p>
+          </div>
+          <div class="num-block">
+            <p class="big">12<i>k</i></p>
+            <p class="label">Pedidos atendidos</p>
+          </div>
+          <div class="num-block">
+            <p class="big">3 <i>cidades</i></p>
+            <p class="label">SP, RJ, Curitiba</p>
+          </div>
+          <div class="num-block">
+            <p class="big"><i>5</i>min</p>
+            <p class="label">Tempo médio de resposta</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HISTÓRIAS / BLOG ═══ -->
+    <section id="oficina" aria-label="Histórias da oficina">
+      <header class="section-header">
+        <div>
+          <span class="section-num">§ 03 — Da oficina</span>
+          <h2 class="section-title">Notas <i>técnicas</i>.</h2>
+        </div>
+        <p class="section-intro">
+          Reviews honestos, comparativos e tutoriais escritos por quem usa o produto antes de vender. Sem afiliado, sem patrocínio escondido.
+        </p>
+      </header>
+
+      <div class="historias-grid">
+        <article class="historia featured">
+          <div class="historia-img" aria-label="Capa: drone fotografado em mesa de bancada">
+            <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#1a140e"/>
+              <g opacity=".15" stroke="#f4ede0" stroke-width=".5">
+                <line x1="0" y1="75" x2="400" y2="75"/><line x1="0" y1="150" x2="400" y2="150"/>
+                <line x1="0" y1="225" x2="400" y2="225"/>
+                <line x1="100" y1="0" x2="100" y2="300"/><line x1="200" y1="0" x2="200" y2="300"/>
+                <line x1="300" y1="0" x2="300" y2="300"/>
+              </g>
+              <ellipse cx="200" cy="150" rx="100" ry="40" fill="#c44d29" opacity=".15"/>
+              <g stroke="#f4ede0" stroke-width="1.5">
+                <line x1="120" y1="120" x2="170" y2="145"/>
+                <line x1="280" y1="120" x2="230" y2="145"/>
+                <line x1="120" y1="180" x2="170" y2="155"/>
+                <line x1="280" y1="180" x2="230" y2="155"/>
+              </g>
+              <ellipse cx="200" cy="150" rx="50" ry="22" fill="#0a0604" stroke="#c44d29" stroke-width="1"/>
+              <circle cx="200" cy="158" r="10" fill="#c44d29"/>
+              <text x="20" y="280" font-family="JetBrains Mono, monospace" font-size="11" fill="#f4ede0" opacity=".5">REVIEW · 12 MIN</text>
+            </svg>
+          </div>
+          <p class="historia-meta">
+            <span class="cat">Review</span><span>•</span><span>06 maio 2026</span><span>•</span><span>12 min de leitura</span>
+          </p>
+          <h3>Mavic 4 Pro depois de 30 dias: vale o upgrade?</h3>
+          <p>Testamos o novo Mavic em três cenários: cinema, mapeamento e voo recreativo. O sensor 4/3 muda mais do que a gente imaginava — mas não para todo mundo.</p>
+          <a href="#" class="read-more">Ler matéria →</a>
+        </article>
+
+        <article class="historia">
+          <p class="historia-meta">
+            <span class="cat">Comparativo</span><span>•</span><span>03 maio</span>
+          </p>
+          <h3>E-bikes urbanas até R$ 10 mil: o que vale em 2026.</h3>
+          <p>Comparamos seis modelos da nossa loja em rota mista de 30 km. Quem ganha em autonomia perde em conforto.</p>
+          <a href="#" class="read-more">Ler →</a>
+        </article>
+
+        <article class="historia">
+          <p class="historia-meta">
+            <span class="cat">Tutorial</span><span>•</span><span>28 abr</span>
+          </p>
+          <h3>Calibrando a IMU do seu drone em 4 minutos.</h3>
+          <p>Passo-a-passo para evitar voos tortos sem precisar mandar pra assistência. Funciona em qualquer DJI dos últimos 3 anos.</p>
+          <a href="#" class="read-more">Ler →</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ NEWSLETTER ═══ -->
+  <section class="newsletter-section" id="contato" aria-label="Receba nossa newsletter">
+    <div class="newsletter-grid">
+      <div>
+        <h2>Boletim mensal,<br>sem <i>enrolação</i>.</h2>
+        <p>Uma vez por mês: estoque novo, achados de oficina, peças com defeito que você precisa saber. Curto, útil, fácil de cancelar.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="enviarNewsletter(event)">
+        <label for="email-newsletter" class="sr-only">Seu e-mail para o boletim</label>
+        <input type="email" id="email-newsletter" name="email" placeholder="seu@email.com" required autocomplete="email" />
+        <button type="submit">Assinar →</button>
+      </form>
+      <p class="newsletter-meta">Cancele com 1 clique · Nunca repassamos seu e-mail</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="brand-link" aria-label="Arngren — Página inicial">
+          Arn<span>gren</span>
+        </a>
+        <p>Loja especializada em drones, bicicletas elétricas, scooters e modelismo. Curadoria honesta, oficina própria, suporte por gente real.</p>
+        <nav aria-label="Redes sociais Arngren" class="footer-redes">
+          <a href="#" aria-label="Arngren no Instagram">IG</a>
+          <a href="#" aria-label="Arngren no YouTube">YT</a>
+          <a href="#" aria-label="Arngren no LinkedIn">LI</a>
+          <a href="#" aria-label="Arngren no WhatsApp">WA</a>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h2>Catálogo</h2>
+        <nav aria-label="Categorias do catálogo">
+          <ul>
+            <li><a href="#catalogo">Drones</a></li>
+            <li><a href="#catalogo">E-bikes</a></li>
+            <li><a href="#catalogo">Scooters</a></li>
+            <li><a href="#catalogo">Modelismo</a></li>
+            <li><a href="#catalogo">Peças</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h2>Loja</h2>
+        <nav aria-label="Sobre a loja">
+          <ul>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#oficina">Oficina</a></li>
+            <li><a href="#">Equipe</a></li>
+            <li><a href="#">Imprensa</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h2>Suporte</h2>
+        <nav aria-label="Suporte ao cliente">
+          <ul>
+            <li><a href="#">Central de ajuda</a></li>
+            <li><a href="#">Garantia</a></li>
+            <li><a href="#">Trocas</a></li>
+            <li><a href="#">Frete</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h2>Onde estamos</h2>
+        <nav aria-label="Lojas físicas">
+          <ul>
+            <li><a href="#">São Paulo</a></li>
+            <li><a href="#">Rio de Janeiro</a></li>
+            <li><a href="#">Curitiba</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Assinatura dos devs -->
+    <div class="devs-strip">
+      <div class="devs-info">
+        <span class="devs-label">Desenvolvido por</span>
+        <div class="devs-people">
+
+          <!-- Jhonatha -->
+          <div class="dev-card">
+            <img
+              src="jhonatha.jpg"
+              alt="Foto de Jhonatha Magalhães da Cruz"
+              class="dev-avatar"
+              width="48"
+              height="48"
+              loading="lazy" />
+            <span class="dev-name">
+              Jhonatha Magalhães
+              <small>Dev</small>
+            </span>
+          </div>
+
+          <span class="dev-amp" aria-hidden="true">&</span>
+
+          <!-- Fellipe -->
+          <div class="dev-card">
+            <img
+              src="fellipe.jpg"
+              alt="Foto de Fellipe de Castro"
+              class="dev-avatar"
+              width="48"
+              height="48"
+              loading="lazy" />
+            <span class="dev-name">
+              Fellipe de Castro
+              <small>Dev</small>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <a
+        href="https://github.com/Johnn216/engenharia-reversa-desenvolvimento-web"
+        class="devs-github"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver código fonte no GitHub (abre em nova aba)">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/>
+        </svg>
+        Ver no GitHub
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>© Arngren 1983–2026. Todos os direitos reservados.</p>
+        <p class="ai-credit">
+          <span aria-hidden="true">✦</span>
+          Construído com auxílio de <i>Claude</i>, IA da Anthropic
+        </p>
+        <nav class="legal-nav" aria-label="Links legais">
+          <ul>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════ CART DRAWER ════════ -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true" onclick="toggleCart()"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-labelledby="cart-titulo" aria-hidden="true">
+    <header class="cart-header">
+      <h2 id="cart-titulo">Sua <i>sacola</i></h2>
+      <button type="button" class="cart-close" aria-label="Fechar sacola" onclick="toggleCart()">✕</button>
+    </header>
+    <div class="cart-body" id="cart-body">
+      <div class="cart-empty">
+        <span class="empty-icon" aria-hidden="true">🛒</span>
+        Sua sacola está vazia.<br>
+        Adicione produtos do catálogo.
+      </div>
+    </div>
+    <footer class="cart-footer">
+      <div class="cart-total">
+        <span class="label">Total</span>
+        <span class="total-value" id="cart-total">R$ 0</span>
+      </div>
+      <button type="button" class="cart-checkout" onclick="checkout()">Finalizar pedido →</button>
+    </footer>
+  </aside>
+
+  <!-- ════════ SEARCH OVERLAY ════════ -->
+  <div class="search-overlay" id="search-overlay-real" role="dialog" aria-labelledby="search-titulo" aria-hidden="true">
+    <div class="search-inner">
+      <button type="button" class="search-close" aria-label="Fechar busca" onclick="toggleSearch()">✕</button>
+      <form id="search-form" role="search" autocomplete="off">
+        <label for="search-input" id="search-titulo">O que você procura?</label>
+        <input type="search" id="search-input" name="q" placeholder="Drone, scooter, helicóptero..." aria-describedby="search-desc">
+        <p id="search-desc" class="sr-only">Digite para filtrar produtos em tempo real.</p>
+      </form>
+      <div class="search-suggestions">
+        <span>Sugestões:</span>
+        <button type="button" onclick="buscarSugestao('drone')">drone</button>
+        <button type="button" onclick="buscarSugestao('e-bike')">e-bike</button>
+        <button type="button" onclick="buscarSugestao('scooter')">scooter</button>
+        <button type="button" onclick="buscarSugestao('rc')">modelismo</button>
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- ════════ QUICK VIEW MODAL ════════ -->
+  <div class="qv-overlay" id="qv-overlay" role="dialog" aria-labelledby="qv-nome" aria-hidden="true" onclick="if(event.target===this)fecharQuickView()">
+    <div class="qv-modal">
+      <div class="qv-img">
+        <span id="qv-emoji" style="font-size: 6rem;" aria-hidden="true">🚁</span>
+      </div>
+      <div class="qv-info">
+        <button type="button" class="qv-close" aria-label="Fechar" onclick="fecharQuickView()">✕</button>
+        <span class="qv-cat" id="qv-cat">Drones</span>
+        <h2 id="qv-nome">Produto</h2>
+        <p class="qv-desc" id="qv-desc">Descrição</p>
+        <dl class="qv-specs" id="qv-specs"></dl>
+        <p class="qv-price" id="qv-preco"></p>
+        <div class="qv-actions">
+          <button type="button" class="btn btn-primary" id="qv-add" style="flex:1;">Adicionar à sacola</button>
+          <button type="button" class="btn btn-ghost" onclick="fecharQuickView()">Continuar olhando</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container de toasts -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script>
+    /* Newsletter */
+    function enviarNewsletter(e) {
+      e.preventDefault();
+      const live = document.getElementById('aria-live-region');
+      const input = document.getElementById('email-newsletter');
+      live.textContent = `Inscrição confirmada para ${input.value}.`;
+      input.value = '';
+    }
+
+    /* ═══ MENU MOBILE ═══ */
+    const drawer = document.getElementById('mobile-drawer');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+    const btnMenu = document.getElementById('btn-menu');
+
+    function toggleMobileMenu() {
+      const aberto = drawer.getAttribute('aria-hidden') === 'false';
+      drawer.setAttribute('aria-hidden', String(aberto));
+      drawerOverlay.setAttribute('aria-hidden', String(aberto));
+      btnMenu.setAttribute('aria-expanded', String(!aberto));
+      document.body.style.overflow = aberto ? '' : 'hidden';
+
+      if (!aberto) {
+        const live = document.getElementById('aria-live-region');
+        live.textContent = 'Menu de navegação aberto.';
+        setTimeout(() => drawer.querySelector('a')?.focus(), 200);
+      } else {
+        btnMenu.focus();
+      }
+    }
+
+    /* Fecha drawer com Escape */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && drawer.getAttribute('aria-hidden') === 'false') {
+        toggleMobileMenu();
+      }
+    });
+
+    /* ═══ WIDGET DE ACESSIBILIDADE ═══ */
+    const a11yPanel = document.getElementById('a11y-panel');
+    const a11yFab = document.getElementById('a11y-fab');
+    const liveRegion = document.getElementById('aria-live-region');
+
+    function toggleA11yPanel() {
+      const aberto = a11yPanel.getAttribute('aria-hidden') === 'false';
+      a11yPanel.setAttribute('aria-hidden', String(aberto));
+      a11yFab.setAttribute('aria-expanded', String(!aberto));
+      if (!aberto) {
+        liveRegion.textContent = 'Painel de acessibilidade aberto.';
+        setTimeout(() => a11yPanel.querySelector('.a11y-close')?.focus(), 100);
+      } else {
+        a11yFab.focus();
+      }
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && a11yPanel.getAttribute('aria-hidden') === 'false') toggleA11yPanel();
+      if (e.altKey && e.key.toLowerCase() === 'a') { e.preventDefault(); toggleA11yPanel(); }
+    });
+
+    /* Tamanho de fonte */
+    const fontSizes = ['a11y-font-sm', '', 'a11y-font-lg', 'a11y-font-xl', 'a11y-font-xxl'];
+    let fontIndex = 1;
+
+    function aplicarFonte(idx) {
+      fontIndex = Math.max(0, Math.min(fontSizes.length - 1, idx));
+      fontSizes.forEach(c => c && document.documentElement.classList.remove(c));
+      if (fontSizes[fontIndex]) document.documentElement.classList.add(fontSizes[fontIndex]);
+      salvar('fontIndex', fontIndex);
+      const labels = ['Pequena', 'Padrão', 'Grande', 'Maior', 'Máxima'];
+      liveRegion.textContent = `Fonte alterada para ${labels[fontIndex]}.`;
+    }
+
+    document.querySelector('[data-action="font-decrease"]').addEventListener('click', () => aplicarFonte(fontIndex - 1));
+    document.querySelector('[data-action="font-default"]').addEventListener('click', () => aplicarFonte(1));
+    document.querySelector('[data-action="font-increase"]').addEventListener('click', () => aplicarFonte(fontIndex + 1));
+
+    /* Toggles */
+    document.querySelectorAll('[data-toggle]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const classe = btn.getAttribute('data-toggle');
+        const ativado = document.documentElement.classList.toggle(classe);
+        btn.setAttribute('aria-pressed', String(ativado));
+        salvar(classe, ativado);
+        const nomes = {
+          'a11y-high-contrast': 'Alto contraste', 'a11y-invert': 'Inversão',
+          'a11y-grayscale': 'Escala cinza', 'a11y-underline': 'Sublinhar links',
+          'a11y-letter-spacing': 'Espaçamento', 'a11y-dyslexia': 'Modo dislexia',
+          'a11y-big-cursor': 'Cursor grande', 'a11y-no-animation': 'Animações',
+          'a11y-reader-mode': 'Leitor de tela'
+        };
+        liveRegion.textContent = `${nomes[classe]} ${ativado ? 'ativado' : 'desativado'}.`;
+        if (classe === 'a11y-reader-mode') {
+          if (ativado) ativarLeitor();
+          else desativarLeitor();
+        }
+      });
+    });
+
+    /* Leitor TTS */
+    function lerTexto(texto) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(texto);
+      utter.lang = 'pt-BR';
+      window.speechSynthesis.speak(utter);
+    }
+    let leitorTimeout = null;
+    let ultimoTextoLido = '';
+
+    function manipularLeitura(e) {
+      const alvo = e.target;
+      if (alvo.closest('.a11y-panel') || alvo.closest('.a11y-fab')) return;
+      const texto = (alvo.innerText || alvo.textContent || alvo.getAttribute('aria-label') || '').trim();
+      if (!texto || texto.length < 2 || texto.length > 600) return;
+      if (texto === ultimoTextoLido) return;
+
+      clearTimeout(leitorTimeout);
+      leitorTimeout = setTimeout(() => {
+        ultimoTextoLido = texto;
+        lerTexto(texto);
+      }, 350);
+    }
+    function ativarLeitor() {
+      document.body.addEventListener('mouseover', manipularLeitura);
+      lerTexto('Leitor de tela ativado. Passe o mouse sobre os textos para ouvi-los.');
+    }
+    function desativarLeitor() {
+      document.body.removeEventListener('mouseover', manipularLeitura);
+      clearTimeout(leitorTimeout);
+      ultimoTextoLido = '';
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    }
+
+    /* Persistência */
+    function salvar(k, v) { try { localStorage.setItem(`a11y_${k}`, JSON.stringify(v)); } catch(e){} }
+    function carregar() {
+      try {
+        const f = JSON.parse(localStorage.getItem('a11y_fontIndex'));
+        if (typeof f === 'number') aplicarFonte(f);
+        document.querySelectorAll('[data-toggle]').forEach(btn => {
+          const c = btn.getAttribute('data-toggle');
+          if (JSON.parse(localStorage.getItem(`a11y_${c}`)) === true) {
+            document.documentElement.classList.add(c);
+            btn.setAttribute('aria-pressed', 'true');
+          }
+        });
+      } catch(e){}
+    }
+
+    function resetarA11y() {
+      ['a11y-font-sm','a11y-font-lg','a11y-font-xl','a11y-font-xxl','a11y-high-contrast',
+       'a11y-invert','a11y-grayscale','a11y-underline','a11y-letter-spacing','a11y-dyslexia',
+       'a11y-big-cursor','a11y-no-animation','a11y-reader-mode'].forEach(c => document.documentElement.classList.remove(c));
+      document.querySelectorAll('[data-toggle]').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      fontIndex = 1;
+      desativarLeitor();
+      try { Object.keys(localStorage).filter(k => k.startsWith('a11y_')).forEach(k => localStorage.removeItem(k)); } catch(e){}
+      liveRegion.textContent = 'Preferências restauradas.';
+    }
+
+    carregar();
+
+    /* ════════════════════════════════════════════════
+       SISTEMA INTERATIVO COMPLETO
+       Cart, Search, Quick View, Toasts
+    ═════════════════════════════════════════════════ */
+
+    // Catálogo de produtos (dados completos)
+    const PRODUTOS = [
+      { id: 'mavic',   nome: 'DJI Mavic 4 Pro',     cat: 'Drones',        preco: 23490, desc: 'Drone profissional 8K com sensor 4/3" e gravação omnidirecional. Bateria de 51 minutos.', emoji: '🚁', specs: { 'Alcance': '15 km', 'Bateria': '51 min', 'Sensor': '4/3 CMOS', 'Peso': '958 g' } },
+      { id: 'mini5',   nome: 'DJI Mini 5 Pro',      cat: 'Drones',        preco: 8290,  desc: 'Drone compacto de 249g com câmera 1" e gimbal 3 eixos. Não exige registro na ANAC.', emoji: '🚁', specs: { 'Peso': '249 g', 'Câmera': '1"', 'Bateria': '34 min', 'Alcance': '10 km' } },
+      { id: 'stark',   nome: 'Stark Eco 2',         cat: 'E-bikes',       preco: 9890,  desc: 'E-bike urbana com motor 500W central, autonomia de 80 km e quadro de alumínio.', emoji: '🚲', specs: { 'Motor': '500W', 'Autonomia': '80 km', 'Quadro': 'Alumínio', 'Peso': '23 kg' } },
+      { id: 'helix',   nome: 'Helix RC Pro',        cat: 'Modelismo',     preco: 3490,  desc: 'Helicóptero 6 canais com motor brushless dual e estabilização ativa por giroscópio.', emoji: '🚁', specs: { 'Canais': '6', 'Motor': 'Brushless', 'Bateria': '15 min', 'Alcance': '500 m' } },
+      { id: 'volt',    nome: 'Volt SL Sapphire',    cat: 'Scooters',      preco: 6490,  desc: 'Scooter dobrável em alumínio aeroespacial. 65 km de autonomia, 45 km/h.', emoji: '🛴', specs: { 'Velocidade': '45 km/h', 'Autonomia': '65 km', 'Peso': '14 kg', 'Carga': '120 kg' } },
+      { id: 'glide',   nome: 'Glide Carbon X',      cat: 'Mobilidade',    preco: 4890,  desc: 'Hoverboard em fibra de carbono com auto-equilíbrio. Certificado UL 2272.', emoji: '🛹', specs: { 'Material': 'Carbono', 'Velocidade': '15 km/h', 'Bateria': '20 km', 'Peso': '8 kg' } },
+      { id: 'falcon',  nome: 'Falcon FPV 5"',       cat: 'Drones FPV',    preco: 2890,  desc: 'Quadricóptero racing 5 polegadas. Frame em fibra de carbono, motor 2207, ESC 60A.', emoji: '🚁', specs: { 'Frame': '5"', 'Motor': '2207', 'ESC': '60A', 'Velocidade': '180 km/h' } }
+    ];
+
+    // ─── TOASTS ───
+    function toast(mensagem, tipo = 'success') {
+      let container = document.querySelector('.toast-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container';
+        container.setAttribute('aria-live', 'polite');
+        document.body.appendChild(container);
+      }
+      const t = document.createElement('div');
+      t.className = `toast ${tipo}`;
+      t.textContent = mensagem;
+      container.appendChild(t);
+      setTimeout(() => {
+        t.classList.add('removing');
+        setTimeout(() => t.remove(), 300);
+      }, 2800);
+    }
+
+    // ─── CART STATE ───
+    let cart = JSON.parse(localStorage.getItem('arn_cart') || '[]');
+
+    function salvarCart() {
+      localStorage.setItem('arn_cart', JSON.stringify(cart));
+    }
+
+    function addToCart(id) {
+      const prod = PRODUTOS.find(p => p.id === id);
+      if (!prod) return;
+      const existing = cart.find(i => i.id === id);
+      if (existing) { existing.qty++; toast(`+1 ${prod.nome} no carrinho`); }
+      else { cart.push({ ...prod, qty: 1 }); toast(`${prod.nome} adicionado ao carrinho`); }
+      salvarCart();
+      renderCart();
+      bumpBadge();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      salvarCart();
+      renderCart();
+      bumpBadge();
+      toast('Item removido do carrinho');
+    }
+
+    function bumpBadge() {
+      const total = cart.reduce((s, i) => s + i.qty, 0);
+      const badge = document.querySelector('.icon-btn[aria-label*="Sacola"] .badge');
+      if (!badge) return;
+      if (total > 0) {
+        badge.textContent = total;
+        badge.style.display = '';
+        badge.classList.remove('bump');
+        void badge.offsetWidth;
+        badge.classList.add('bump');
+      } else {
+        badge.style.display = 'none';
+      }
+    }
+
+    function renderCart() {
+      const body = document.getElementById('cart-body');
+      const total = cart.reduce((s, i) => s + (i.preco * i.qty), 0);
+      document.getElementById('cart-total').textContent = `R$ ${total.toLocaleString('pt-BR')}`;
+
+      if (cart.length === 0) {
+        body.innerHTML = `<div class="cart-empty"><span class="empty-icon" aria-hidden="true">🛒</span>Sua sacola está vazia.<br>Adicione produtos do catálogo.</div>`;
+        return;
+      }
+
+      body.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <div class="cart-item-img" aria-hidden="true">${item.emoji}</div>
+          <div class="cart-item-info">
+            <h4>${item.nome}</h4>
+            <p>${item.cat} ${item.qty > 1 ? '× ' + item.qty : ''}</p>
+            <button class="cart-remove" onclick="removeFromCart('${item.id}')">Remover</button>
+          </div>
+          <div class="cart-item-price">R$ ${(item.preco * item.qty).toLocaleString('pt-BR')}</div>
+        </div>
+      `).join('');
+    }
+
+    function toggleCart() {
+      const drawer = document.getElementById('cart-drawer');
+      const overlay = document.getElementById('cart-overlay');
+      const aberto = drawer.getAttribute('aria-hidden') === 'false';
+      drawer.setAttribute('aria-hidden', String(aberto));
+      overlay.setAttribute('aria-hidden', String(aberto));
+      document.body.style.overflow = aberto ? '' : 'hidden';
+    }
+
+    function checkout() {
+      if (cart.length === 0) { toast('Sacola vazia!', 'error'); return; }
+      toast(`Pedido de R$ ${cart.reduce((s,i)=>s+(i.preco*i.qty),0).toLocaleString('pt-BR')} confirmado! 🎉`);
+      cart = [];
+      salvarCart();
+      renderCart();
+      bumpBadge();
+      setTimeout(toggleCart, 800);
+    }
+
+    // ─── SEARCH ───
+    function toggleSearch() {
+      const ov = document.getElementById('search-overlay-real');
+      const aberto = ov.getAttribute('aria-hidden') === 'false';
+      ov.setAttribute('aria-hidden', String(aberto));
+      if (!aberto) {
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => document.getElementById('search-input').focus(), 100);
+        renderSearchResults('');
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
+    function renderSearchResults(termo) {
+      const cont = document.getElementById('search-results');
+      const t = termo.toLowerCase().trim();
+      const filtrados = t ? PRODUTOS.filter(p => p.nome.toLowerCase().includes(t) || p.cat.toLowerCase().includes(t)) : PRODUTOS;
+
+      if (filtrados.length === 0) {
+        cont.innerHTML = `<p class="search-empty" style="text-align:center;padding:2rem;font-family:var(--mono);font-size:.8rem;color:var(--ink-mute);">Nenhum resultado para "${termo}"</p>`;
+        return;
+      }
+
+      cont.innerHTML = filtrados.map(p => `
+        <button class="search-result-item" onclick="abrirQuickView('${p.id}'); toggleSearch();">
+          <div>
+            <h4>${p.nome}</h4>
+            <p class="search-cat">${p.cat} · R$ ${p.preco.toLocaleString('pt-BR')}</p>
+          </div>
+          <span style="font-family:var(--mono);font-size:.7rem;">→</span>
+        </button>
+      `).join('');
+    }
+
+    function buscarSugestao(termo) {
+      document.getElementById('search-input').value = termo;
+      renderSearchResults(termo);
+    }
+
+    // ─── QUICK VIEW ───
+    function abrirQuickView(id) {
+      const p = PRODUTOS.find(x => x.id === id);
+      if (!p) return;
+      const ov = document.getElementById('qv-overlay');
+      document.getElementById('qv-cat').textContent = p.cat;
+      document.getElementById('qv-nome').textContent = p.nome;
+      document.getElementById('qv-desc').textContent = p.desc;
+      document.getElementById('qv-emoji').textContent = p.emoji;
+      document.getElementById('qv-preco').innerHTML = `<span class="m">R$</span>${p.preco.toLocaleString('pt-BR')}`;
+      document.getElementById('qv-specs').innerHTML = Object.entries(p.specs).map(([k,v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+      document.getElementById('qv-add').onclick = () => { addToCart(p.id); fecharQuickView(); };
+      ov.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharQuickView() {
+      document.getElementById('qv-overlay').setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // ─── BIND DE EVENTOS ───
+    document.addEventListener('DOMContentLoaded', () => {
+      // Botão de busca no header
+      const searchBtn = document.querySelector('.icon-btn[aria-label="Buscar produtos"]');
+      if (searchBtn) searchBtn.addEventListener('click', toggleSearch);
+
+      // Botão de carrinho no header
+      const cartBtn = document.querySelector('.icon-btn[aria-label*="Sacola"]');
+      if (cartBtn) cartBtn.addEventListener('click', toggleCart);
+
+      // Botão de conta
+      const accBtn = document.querySelector('.icon-btn[aria-label="Minha conta"]');
+      if (accBtn) accBtn.addEventListener('click', () => toast('Faça login para acessar sua conta'));
+
+      // Cards de produto: click abre quick view
+      const idMap = ['mavic']; // hero feature primeiro
+      document.querySelectorAll('.produto').forEach((card, i) => {
+        const ids = ['mini5', 'stark', 'helix', 'volt', 'glide', 'falcon'];
+        const id = ids[i] || ids[0];
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', e => {
+          if (e.target.closest('.produto-acao') || e.target.closest('a')) {
+            e.preventDefault();
+          }
+          abrirQuickView(id);
+        });
+      });
+
+      // Botão "Comprar agora" do hero feature
+      const heroBuyBtn = document.querySelector('.feature-price .btn-primary');
+      if (heroBuyBtn) {
+        heroBuyBtn.addEventListener('click', e => {
+          e.preventDefault();
+          addToCart('mavic');
+        });
+      }
+
+      // Botões "Ver catálogo" / "Falar com a oficina"
+      const verCat = document.querySelector('.hero-actions .btn-primary');
+      if (verCat) verCat.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Inicializa badge
+      bumpBadge();
+      renderCart();
+
+      // Submit do search
+      document.getElementById('search-form').addEventListener('submit', e => {
+        e.preventDefault();
+        renderSearchResults(document.getElementById('search-input').value);
+      });
+      document.getElementById('search-input').addEventListener('input', e => renderSearchResults(e.target.value));
+
+      // Ticker e categoria strip clickable
+      document.querySelectorAll('.strip-cat').forEach((cat, i) => {
+        cat.addEventListener('click', e => {
+          e.preventDefault();
+          document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
+          toast(`Filtrando por ${cat.textContent.trim().split(' ').slice(1).join(' ')}`);
+        });
+      });
+    });
+
+    // ESC fecha tudo
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        if (document.getElementById('search-overlay-real')?.getAttribute('aria-hidden') === 'false') toggleSearch();
+        if (document.getElementById('cart-drawer')?.getAttribute('aria-hidden') === 'false') toggleCart();
+        if (document.getElementById('qv-overlay')?.getAttribute('aria-hidden') === 'false') fecharQuickView();
+      }
+    });
+  </script>
+
+</body>
+</html>
