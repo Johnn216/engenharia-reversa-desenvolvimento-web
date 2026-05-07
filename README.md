@@ -29,30 +29,15 @@ Este repositório contém **dois exercícios práticos** de transformação de p
 
 ```
 .
-├── README.md                       ← Este arquivo
-├── tecnoblog-acessivel.html       ← Refatoração do site Tecnoblog
-└── arngren-premium.html           ← Refatoração do site Arngren (Editorial Magazine)
+├── README.md                       ← Este arquivo  
+└── arngren-premium.html           ← Refatoração do site Arngren 
 ```
 
 ---
-
-## 🚀 Como executar
-
-```bash
-# Opção 1: Abrir direto no navegador
-# Clique duas vezes em qualquer arquivo .html
-
-# Opção 2: Servir via HTTP local (recomendado para fontes externas)
-python -m http.server 8765
 
 # Acesse:
-# http://localhost:8765/tecnoblog-acessivel.html
-# http://localhost:8765/arngren-premium.html
+
 ```
-
-> 💡 **Dica:** O método via servidor HTTP local é melhor porque carrega as Google Fonts corretamente e simula o comportamento de produção.
-
----
 
 ## ✅ Missões cumpridas
 
@@ -70,64 +55,7 @@ Cada arquivo implementa as missões da atividade prática:
 
 ---
 
-## 🌐 Página 1 — Tecnoblog
-
-**Arquivo:** `tecnoblog-acessivel.html`
-**Inspiração:** [tecnoblog.net](https://tecnoblog.net) (portal de notícias de tecnologia)
-
-### O que foi corrigido
-
-A versão original tinha:
-
-- ❌ Dois elementos `<contentinfo>` (footer duplicado)
-- ❌ Botão de busca sem nome acessível
-- ❌ Inputs com apenas `placeholder` (sem `<label>`)
-- ❌ Hierarquia de headings achatada (sem H1, tudo no mesmo nível)
-- ❌ Datas e categorias em `<div>` genéricos
-- ❌ Sem skip link nem `aria-live`
-
-### Correções aplicadas
-
-```html
-<!-- ANTES: button sem label -->
-<button type="submit">🔍</button>
-
-<!-- DEPOIS: button com aria-label -->
-<button type="submit" aria-label="Pesquisar">🔍</button>
-```
-
-```html
-<!-- ANTES: data como div genérico -->
-<div>Hoje às 21:08</div>
-
-<!-- DEPOIS: <time> semântico com datetime -->
-<time datetime="2026-05-07T21:08">Hoje às 21:08</time>
-```
-
-```html
-<!-- ANTES: categoria como div genérico -->
-<div>Notícia</div>
-
-<!-- DEPOIS: span semântico com classe descritiva -->
-<span class="categoria">Notícia</span>
-```
-
-### Hierarquia de headings
-
-```
-H1 (oculto) — "Últimas notícias de tecnologia"
-├── H2 — "Samsung libera One UI 8.5..." (hero)
-├── H2 — "Últimas Notícias" (seção)
-│   ├── H3 — "TCL e Roku são acusadas..."
-│   ├── H3 — "Google vai usar Reddit..."
-│   └── H3 — ...
-└── H2 — "Mais Populares" (sidebar)
-    └── H3 — títulos dos artigos populares
-```
-
----
-
-## 🛒 Página 2 — Arngren
+## 🛒 Página — Arngren
 
 **Arquivo:** `arngren-premium.html`
 **Inspiração:** [arngren.net](https://arngren.net) (e-commerce conhecido pelo design caótico)
@@ -324,13 +252,7 @@ Cada página tem **um único H1** descrevendo o conteúdo principal, seguido por
 
 ## 📐 Decisões de design — Arngren
 
-### Por que mudei para estética editorial?
 
-A primeira versão do Arngren ficou **com cara de site gerado por IA**: dark theme + dourado + Cormorant Garamond + "tecnologia como arte" — combinação que aparece em ~80% dos sites criados por LLMs.
-
-A versão final foge disso radicalmente:
-
-| Sinal "AI-generated" | Substituído por |
 |---|---|
 | Dark + gold | Creme + tinta + terracota |
 | "Atelier", "boutique", "premium" | "Loja antiga, cabeça nova" |
@@ -343,27 +265,6 @@ A versão final foge disso radicalmente:
 | Em-dashes everywhere | Estrela `★` como indicador |
 
 ---
-
-## 📊 Resumo: o que tem em cada arquivo
-
-| Feature | Tecnoblog | Arngren |
-|---------|:---:|:---:|
-| Skip link | ✅ | ✅ |
-| `aria-live` region | ✅ | ✅ |
-| Hierarquia H1→H2→H3 correta | ✅ | ✅ |
-| Schema.org JSON-LD | ✅ | ✅ |
-| Meta description + OG + Twitter | ✅ | ✅ |
-| Imagens com `alt` descritivo | ✅ | ✅ |
-| Forms com `<label>` acessível | ✅ | ✅ |
-| Footer único e bem estruturado | ✅ | ✅ |
-| Estrutura semântica completa | ✅ | ✅ |
-| Widget de acessibilidade flutuante | — | ✅ |
-| Estética editorial premium | — | ✅ |
-| Tipografia variable (`Fraunces`) | — | ✅ |
-| Modo dislexia / leitor de tela | — | ✅ |
-
----
-
 ## 🧪 Como testar
 
 ### Acessibilidade
@@ -390,7 +291,9 @@ Projeto educacional. Os logos e nomes "Tecnoblog" e "Arngren" pertencem a seus r
 
 ## 👤 Autor
 
-**Jhon** — Trabalho desenvolvido para disciplina de desenvolvimento web
+**Jhonathan Magalhães da Cruz**
+**Fellipe De Castro**
+— Trabalho desenvolvido para disciplina de desenvolvimento web
 
 ---
 
