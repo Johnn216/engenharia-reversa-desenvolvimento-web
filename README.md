@@ -52,8 +52,7 @@ Cada arquivo implementa as missões da atividade prática:
 | 3 | **Acessibilidade** — `alt` em imagens e `<label>` em forms | 2 | ✅ |
 | 4 | **SEO** — hierarquia correta de títulos H1→H2→H3 | 1 | ✅ |
 | 5 | **Debug** — corrigir erros de semântica e a11y | 3 | ✅ |
-| ⭐ | **Missão Secreta** — skip link + `aria-live` | +1 | ✅ |
-| **Total** | | **11/10** | 🏆 |
+| **Total** | | **10/10** | 🏆 |
 
 ---
 
