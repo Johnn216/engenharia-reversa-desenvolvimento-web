@@ -64,7 +64,60 @@
 
       --max:         1280px;
       --t:           cubic-bezier(.2,.8,.2,1);
+      --surface-dark: #1a140e;
     }
+
+    /* ─── Modo escuro (cores invertidas) ─── */
+    html.theme-dark {
+      color-scheme: dark;
+      --paper:       #12100c;
+      --paper-dark:  #1c1814;
+      --paper-deep:  #080604;
+      --ink:         #f0e8d8;
+      --ink-soft:    #c8baa8;
+      --ink-mute:    #958870;
+      --line:        #332c24;
+      --bone:        #faf5e8;
+      --terra:       #e07048;
+      --terra-dark:  #c44d29;
+      --moss:        #7a9468;
+      --surface-dark: #1a140e;
+    }
+
+    html.theme-dark body {
+      background-image:
+        radial-gradient(ellipse at top, rgba(224,112,72,.07), transparent 60%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' /><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    }
+
+    html.theme-dark .site-header { background: var(--paper-dark); border-bottom-color: var(--line); }
+    html.theme-dark footer.site-footer { background: var(--paper-deep); }
+    html.theme-dark .produto-img { background: var(--paper-dark); }
+    html.theme-dark .btn-ghost:hover { background: var(--surface-dark); color: var(--bone); border-color: var(--terra); }
+
+    html.theme-dark .newsletter-section,
+    html.theme-dark .btn-primary,
+    html.theme-dark .toast,
+    html.theme-dark .search-close:hover,
+    html.theme-dark .search-result-item:hover,
+    html.theme-dark .cart-close:hover,
+    html.theme-dark .cart-checkout,
+    html.theme-dark .qv-close:hover,
+    html.theme-dark .a11y-fab,
+    html.theme-dark .a11y-panel,
+    html.theme-dark .skip-link:focus,
+    html.theme-dark .produto-tag.tag-best,
+    html.theme-dark .ticker {
+      background: var(--surface-dark);
+      color: var(--bone);
+    }
+
+    html.theme-dark .btn-primary:hover { background: var(--terra); color: var(--bone); }
+    html.theme-dark .newsletter-section,
+    html.theme-dark .newsletter-section h2,
+    html.theme-dark .newsletter-section p,
+    html.theme-dark .newsletter-form input,
+    html.theme-dark .newsletter-form button { color: var(--bone); }
 
     html { font-size: 16px; scroll-behavior: smooth; }
 
@@ -363,6 +416,16 @@
       transition: color .2s;
     }
     .icon-btn:hover { color: var(--terra); }
+    .icon-btn[aria-pressed="true"] { color: var(--terra); }
+    .lang-btn {
+      width: auto;
+      min-width: 40px;
+      padding: 0 .5rem;
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+    }
     .icon-btn .badge {
       position: absolute; top: 4px; right: 4px;
       background: var(--terra); color: var(--bone);
@@ -487,6 +550,7 @@
 
     /* Hero feature card / produto destaque */
     .hero-feature {
+      scroll-margin-top: 5rem;
       max-width: var(--max);
       margin: 4rem auto 0;
       padding: 0 1.5rem;
@@ -1116,6 +1180,137 @@
     }
     .footer-col nav a:hover { color: var(--bone); }
 
+    /* ─── Formulário de contato no footer ─── */
+    .footer-form-section {
+      border-top: 1px solid rgba(250, 245, 232, .12);
+      padding: 2.5rem 1.5rem 3rem;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .footer-form-header {
+      margin-bottom: 1.75rem;
+    }
+    .footer-form-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 500;
+      color: var(--bone);
+      letter-spacing: -.02em;
+      font-variation-settings: "SOFT" 50, "WONK" 1;
+      margin-bottom: .5rem;
+    }
+    .footer-form-header h2 i {
+      color: var(--terra);
+      font-style: italic;
+    }
+    .footer-form-header p {
+      color: rgba(250, 245, 232, .65);
+      font-size: .9rem;
+      max-width: 52ch;
+    }
+    .footer-contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem 1.5rem;
+    }
+    .footer-contact-form .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .footer-contact-form .form-field--full {
+      grid-column: 1 / -1;
+    }
+    .footer-contact-form label {
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 500;
+      color: var(--terra);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .footer-contact-form input,
+    .footer-contact-form textarea {
+      background: rgba(250, 245, 232, .04);
+      border: 1px solid rgba(250, 245, 232, .2);
+      color: var(--bone);
+      font-family: var(--sans);
+      font-size: .95rem;
+      padding: .75rem 1rem;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      resize: vertical;
+    }
+    .footer-contact-form input::placeholder,
+    .footer-contact-form textarea::placeholder {
+      color: rgba(250, 245, 232, .35);
+    }
+    .footer-contact-form input:focus,
+    .footer-contact-form textarea:focus {
+      border-color: var(--terra);
+      box-shadow: 0 0 0 2px rgba(196, 77, 41, .2);
+    }
+    .footer-contact-form input.is-valid,
+    .footer-contact-form textarea.is-valid {
+      border-color: rgba(120, 180, 120, .7);
+    }
+    .footer-contact-form input.is-invalid,
+    .footer-contact-form textarea.is-invalid {
+      border-color: rgba(220, 90, 70, .85);
+      box-shadow: 0 0 0 2px rgba(220, 90, 70, .15);
+    }
+    .footer-contact-form .field-error {
+      font-family: var(--mono);
+      font-size: .65rem;
+      color: rgba(240, 130, 110, .95);
+      letter-spacing: .02em;
+      min-height: 1rem;
+    }
+    .footer-contact-form .field-error:empty { display: none; }
+    .footer-contact-form .form-actions {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: .25rem;
+    }
+    .footer-contact-form .btn-submit {
+      background: var(--terra);
+      border: 1px solid var(--terra);
+      color: var(--bone);
+      font-family: var(--mono);
+      font-size: .75rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      padding: .85rem 1.75rem;
+      cursor: pointer;
+      transition: all .25s var(--t);
+      min-height: 44px;
+    }
+    .footer-contact-form .btn-submit:hover:not(:disabled) {
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 rgba(250, 245, 232, .15);
+    }
+    .footer-contact-form .btn-submit:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+    .footer-contact-form .form-status {
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: rgba(250, 245, 232, .55);
+      letter-spacing: .03em;
+    }
+    .footer-contact-form .form-status.is-success { color: rgba(140, 200, 140, .95); }
+    .footer-contact-form .form-status.is-error { color: rgba(240, 130, 110, .95); }
+
+    @media (max-width: 700px) {
+      .footer-contact-form { grid-template-columns: 1fr; }
+      .footer-contact-form .form-field--full { grid-column: 1; }
+      .footer-contact-form .form-actions { grid-column: 1; }
+    }
+
     /* ─── Assinatura dos devs ─── */
     .devs-strip {
       border-top: 1px solid rgba(250, 245, 232, .12);
@@ -1699,11 +1894,23 @@
       .a11y-fab { width: 50px; height: 50px; bottom: 1rem; right: 1rem; }
     }
   </style>
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('arn_theme') === 'dark') {
+          document.documentElement.classList.add('theme-dark');
+        }
+        if (localStorage.getItem('arn_lang') === 'en') {
+          document.documentElement.lang = 'en';
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
 <body>
 
-  <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+  <a href="#conteudo" class="skip-link" data-i18n="skipLink">Pular para o conteúdo principal</a>
   <div id="aria-live-region" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <!-- Botão de Acessibilidade -->
@@ -1790,19 +1997,19 @@
   <!-- ═══ TICKER ═══ -->
   <div class="ticker" role="complementary" aria-label="Avisos">
     <div class="ticker-track">
-      <span class="ticker-item">Frete grátis acima de R$ 1.500</span>
-      <span class="ticker-item">Garantia estendida em todos os drones</span>
-      <span class="ticker-item">Suporte técnico 7 dias</span>
-      <span class="ticker-item">12x sem juros no cartão</span>
-      <span class="ticker-item">Loja física em São Paulo</span>
-      <span class="ticker-item">Novidade: Stark Eco 2 já disponível</span>
+      <span class="ticker-item" data-i18n="ticker1">Frete grátis acima de R$ 1.500</span>
+      <span class="ticker-item" data-i18n="ticker2">Garantia estendida em todos os drones</span>
+      <span class="ticker-item" data-i18n="ticker3">Suporte técnico 7 dias</span>
+      <span class="ticker-item" data-i18n="ticker4">12x sem juros no cartão</span>
+      <span class="ticker-item" data-i18n="ticker5">Loja física em São Paulo</span>
+      <span class="ticker-item" data-i18n="ticker6">Novidade: Stark Eco 2 já disponível</span>
       <!-- Duplica para loop -->
-      <span class="ticker-item">Frete grátis acima de R$ 1.500</span>
-      <span class="ticker-item">Garantia estendida em todos os drones</span>
-      <span class="ticker-item">Suporte técnico 7 dias</span>
-      <span class="ticker-item">12x sem juros no cartão</span>
-      <span class="ticker-item">Loja física em São Paulo</span>
-      <span class="ticker-item">Novidade: Stark Eco 2 já disponível</span>
+      <span class="ticker-item" data-i18n="ticker1">Frete grátis acima de R$ 1.500</span>
+      <span class="ticker-item" data-i18n="ticker2">Garantia estendida em todos os drones</span>
+      <span class="ticker-item" data-i18n="ticker3">Suporte técnico 7 dias</span>
+      <span class="ticker-item" data-i18n="ticker4">12x sem juros no cartão</span>
+      <span class="ticker-item" data-i18n="ticker5">Loja física em São Paulo</span>
+      <span class="ticker-item" data-i18n="ticker6">Novidade: Stark Eco 2 já disponível</span>
     </div>
   </div>
 
@@ -1818,26 +2025,32 @@
 
       <nav class="nav-principal" aria-label="Navegação principal">
         <ul>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#destaques">Destaques</a></li>
-          <li><a href="#historia">História</a></li>
-          <li><a href="#oficina">Oficina</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#catalogo" data-i18n="navCatalog">Catálogo</a></li>
+          <li><a href="#destaques" data-i18n="navHighlights">Destaques</a></li>
+          <li><a href="#historia" data-i18n="navHistory">História</a></li>
+          <li><a href="#oficina" data-i18n="navWorkshop">Oficina</a></li>
+          <li><a href="#contato" data-i18n="navContact">Contato</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn" aria-label="Buscar produtos">
+        <button type="button" class="icon-btn" id="btn-theme" aria-label="Ativar modo escuro" aria-pressed="false" onclick="toggleTheme()" title="Modo escuro">
+          <svg id="icon-theme" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button type="button" class="icon-btn lang-btn" id="btn-lang" aria-label="Mudar para inglês" onclick="toggleLanguage()">EN</button>
+        <button type="button" class="icon-btn" id="btn-search" aria-label="Buscar produtos" data-i18n-aria="searchProducts">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
           </svg>
         </button>
-        <button type="button" class="icon-btn" aria-label="Minha conta">
+        <button type="button" class="icon-btn" id="btn-account" aria-label="Minha conta" data-i18n-aria="myAccount">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/>
           </svg>
         </button>
-        <button type="button" class="icon-btn" aria-label="Sacola com 2 itens">
+        <button type="button" class="icon-btn" id="btn-cart" aria-label="Sacola com 2 itens" data-i18n-aria="cartLabel">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/>
           </svg>
@@ -1862,15 +2075,15 @@
   <!-- Drawer mobile -->
   <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true" onclick="toggleMobileMenu()"></div>
   <nav class="mobile-drawer" id="mobile-drawer" aria-label="Menu mobile" aria-hidden="true">
-    <h2>Navegação</h2>
+    <h2 data-i18n="mobileNav">Navegação</h2>
     <ul>
-      <li><a href="#catalogo" onclick="toggleMobileMenu()">Catálogo</a></li>
-      <li><a href="#destaques" onclick="toggleMobileMenu()">Destaques</a></li>
-      <li><a href="#historia" onclick="toggleMobileMenu()">História</a></li>
-      <li><a href="#oficina" onclick="toggleMobileMenu()">Oficina</a></li>
-      <li><a href="#contato" onclick="toggleMobileMenu()">Contato</a></li>
+      <li><a href="#catalogo" onclick="toggleMobileMenu()" data-i18n="navCatalog">Catálogo</a></li>
+      <li><a href="#destaques" onclick="toggleMobileMenu()" data-i18n="navHighlights">Destaques</a></li>
+      <li><a href="#historia" onclick="toggleMobileMenu()" data-i18n="navHistory">História</a></li>
+      <li><a href="#oficina" onclick="toggleMobileMenu()" data-i18n="navWorkshop">Oficina</a></li>
+      <li><a href="#contato" onclick="toggleMobileMenu()" data-i18n="navContact">Contato</a></li>
     </ul>
-    <h2>Categorias</h2>
+    <h2 data-i18n="mobileCategories">Categorias</h2>
     <ul>
       <li><a href="#catalogo" onclick="toggleMobileMenu()">Drones</a></li>
       <li><a href="#catalogo" onclick="toggleMobileMenu()">E-bikes</a></li>
@@ -1893,11 +2106,11 @@
         <div>
           <p class="hero-meta">
             <span class="dot" aria-hidden="true"></span>
-            <span>Edição #142</span>
+            <span data-i18n="heroEdition">Edição #142</span>
             <span>•</span>
-            <span>Maio 2026</span>
+            <span data-i18n="heroMonth">Maio 2026</span>
           </p>
-          <h1>
+          <h1 data-i18n-html="heroTitle">
             Catálogo<br>
             de <span class="terra"><i>vôo,</i></span><br>
             <span class="terra"><i>roda</i></span> e<br>
@@ -1905,18 +2118,18 @@
           </h1>
         </div>
         <div class="hero-side">
-          <p class="hero-lead">
+          <p class="hero-lead" data-i18n="heroLead">
             Drones, bicicletas elétricas, scooters e modelismo de controle remoto. Curadoria honesta, suporte de quem entende, e — quando você precisar — peça de reposição em estoque.
           </p>
           <div class="hero-actions">
-            <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
-            <a href="#oficina" class="btn btn-ghost">Falar com a oficina</a>
+            <a href="#catalogo" class="btn btn-primary" data-i18n="heroBtnCatalog">Ver catálogo</a>
+            <a href="#oficina" class="btn btn-ghost" data-i18n="heroBtnWorkshop">Falar com a oficina</a>
           </div>
         </div>
       </div>
 
       <!-- Produto destaque editorial -->
-      <div class="hero-feature">
+      <div class="hero-feature" id="destaques" tabindex="-1">
         <div class="feature-img">
           <!-- Drone SVG cinematográfico -->
           <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DJI Mavic 4 Pro: drone profissional em vista de três quartos">
@@ -1995,35 +2208,35 @@
           </svg>
         </div>
         <div class="feature-content">
-          <p class="feature-tag">Lançamento da semana / Estoque limitado</p>
+          <p class="feature-tag" data-i18n="featureTag">Lançamento da semana / Estoque limitado</p>
           <h2 class="feature-title">DJI Mavic <i>4 Pro</i></h2>
-          <p class="feature-desc">
+          <p class="feature-desc" data-i18n="featureDesc">
             O sucessor do Mavic 3 chega com sensor de 4/3", gravação 8K HDR e sistema de detecção omnidirecional. Bateria de 51 minutos. Pronto para entrega.
           </p>
 
           <dl class="specs">
             <div>
-              <dt>Alcance</dt>
+              <dt data-i18n="specRange">Alcance</dt>
               <dd>15 <span class="un">km</span></dd>
             </div>
             <div>
-              <dt>Bateria</dt>
+              <dt data-i18n="specBattery">Bateria</dt>
               <dd>51 <span class="un">min</span></dd>
             </div>
             <div>
-              <dt>Sensor</dt>
+              <dt data-i18n="specSensor">Sensor</dt>
               <dd>4/3 <span class="un">CMOS</span></dd>
             </div>
             <div>
-              <dt>Peso</dt>
+              <dt data-i18n="specWeight">Peso</dt>
               <dd>958 <span class="un">g</span></dd>
             </div>
           </dl>
 
           <div class="feature-price">
             <span class="price-big"><span class="moeda">R$</span>23.490</span>
-            <span class="price-cond">ou 12× R$ 2.090 sem juros</span>
-            <a href="#" class="btn btn-primary" style="margin-left: auto;">Comprar agora</a>
+            <span class="price-cond" data-i18n="featurePriceCond">ou 12× R$ 2.090 sem juros</span>
+            <a href="#" class="btn btn-primary" style="margin-left: auto;" data-i18n="featureBuyNow">Comprar agora</a>
           </div>
         </div>
       </div>
@@ -2032,11 +2245,11 @@
     <!-- ═══ STRIP DE CATEGORIAS ═══ -->
     <nav class="strip-categorias" aria-label="Atalhos de categorias">
       <div class="container">
-        <a href="#catalogo" class="strip-cat"><span class="num"><i>01</i></span> Drones</a>
-        <a href="#catalogo" class="strip-cat"><span class="num"><i>02</i></span> E-bikes</a>
-        <a href="#catalogo" class="strip-cat"><span class="num"><i>03</i></span> Scooters</a>
-        <a href="#catalogo" class="strip-cat"><span class="num"><i>04</i></span> Modelismo</a>
-        <a href="#catalogo" class="strip-cat"><span class="num"><i>05</i></span> Peças</a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>01</i></span> <span data-i18n="catDrones">Drones</span></a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>02</i></span> <span data-i18n="catEbikes">E-bikes</span></a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>03</i></span> <span data-i18n="catScooters">Scooters</span></a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>04</i></span> <span data-i18n="catModel">Modelismo</span></a>
+        <a href="#catalogo" class="strip-cat"><span class="num"><i>05</i></span> <span data-i18n="catParts">Peças</span></a>
       </div>
     </nav>
 
@@ -2044,10 +2257,10 @@
     <section id="catalogo" aria-label="Catálogo de produtos">
       <header class="section-header">
         <div>
-          <span class="section-num">§ 01 — Catálogo</span>
-          <h2 class="section-title">No <i>estoque</i> esta semana.</h2>
+          <span class="section-num" data-i18n="catalogNum">§ 01 — Catálogo</span>
+          <h2 class="section-title" data-i18n-html="catalogTitle">No <i>estoque</i> esta semana.</h2>
         </div>
-        <p class="section-intro">
+        <p class="section-intro" data-i18n-html="catalogIntro">
           Não trabalhamos com revenda em massa. Cada item passa pela <strong>oficina antes do envio</strong> — calibragem, firmware atualizado, teste em bancada.
         </p>
       </header>
@@ -2057,7 +2270,7 @@
         <article class="produto">
           <p class="produto-num">№ 01 / 06</p>
           <div class="produto-img">
-            <span class="produto-tag tag-novo">Novo</span>
+            <span class="produto-tag tag-novo" data-i18n="tagNew">Novo</span>
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Drone DJI Mini 5 Pro em vista frontal">
               <g stroke="#1a140e" fill="none" stroke-linecap="round">
                 <line x1="60" y1="80" x2="95" y2="100" stroke-width="6"/>
@@ -2080,17 +2293,17 @@
           </div>
           <p class="produto-cat">Drones</p>
           <h3>DJI Mini 5 Pro</h3>
-          <p class="desc">Drone compacto de 249g com câmera 1" e gimbal 3 eixos. Não exige registro na ANAC.</p>
+          <p class="desc" data-i18n="prodMini5Desc">Drone compacto de 249g com câmera 1" e gimbal 3 eixos. Não exige registro na ANAC.</p>
           <div class="produto-foot">
             <span class="produto-preco"><span class="m">R$</span>8.290</span>
-            <a href="#" class="produto-acao">Ver →</a>
+            <a href="#" class="produto-acao" data-i18n="prodView">Ver →</a>
           </div>
         </article>
 
         <article class="produto">
           <p class="produto-num">№ 02 / 06</p>
           <div class="produto-img">
-            <span class="produto-tag tag-best">Mais vendida</span>
+            <span class="produto-tag tag-best" data-i18n="tagBest">Mais vendida</span>
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bicicleta elétrica Stark Eco 2 vista de lado">
               <g stroke="#1a140e" stroke-width="3" fill="none" stroke-linecap="round">
                 <circle cx="55" cy="135" r="32"/>
@@ -2109,10 +2322,10 @@
           </div>
           <p class="produto-cat">E-bikes</p>
           <h3>Stark Eco 2</h3>
-          <p class="desc">E-bike urbana com motor 500W central, autonomia de 80 km e quadro de alumínio.</p>
+          <p class="desc" data-i18n="prodStarkDesc">E-bike urbana com motor 500W central, autonomia de 80 km e quadro de alumínio.</p>
           <div class="produto-foot">
             <span class="produto-preco"><span class="m">R$</span>9.890</span>
-            <a href="#" class="produto-acao">Ver →</a>
+            <a href="#" class="produto-acao" data-i18n="prodView">Ver →</a>
           </div>
         </article>
 
@@ -2135,10 +2348,10 @@
           </div>
           <p class="produto-cat">Modelismo</p>
           <h3>Helix RC Pro</h3>
-          <p class="desc">Helicóptero 6 canais com motor brushless dual e estabilização ativa por giroscópio.</p>
+          <p class="desc" data-i18n="prodHelixDesc">Helicóptero 6 canais com motor brushless dual e estabilização ativa por giroscópio.</p>
           <div class="produto-foot">
             <span class="produto-preco"><span class="m">R$</span>3.490</span>
-            <a href="#" class="produto-acao">Ver →</a>
+            <a href="#" class="produto-acao" data-i18n="prodView">Ver →</a>
           </div>
         </article>
 
@@ -2161,10 +2374,10 @@
           </div>
           <p class="produto-cat">Scooters</p>
           <h3>Volt SL Sapphire</h3>
-          <p class="desc">Scooter dobrável em alumínio aeroespacial. 65 km de autonomia, 45 km/h.</p>
+          <p class="desc" data-i18n="prodVoltDesc">Scooter dobrável em alumínio aeroespacial. 65 km de autonomia, 45 km/h.</p>
           <div class="produto-foot">
             <span class="produto-preco"><span class="m">R$</span>6.490</span>
-            <a href="#" class="produto-acao">Ver →</a>
+            <a href="#" class="produto-acao" data-i18n="prodView">Ver →</a>
           </div>
         </article>
 
@@ -2181,17 +2394,17 @@
           </div>
           <p class="produto-cat">Mobilidade</p>
           <h3>Glide Carbon X</h3>
-          <p class="desc">Hoverboard em fibra de carbono com auto-equilíbrio. Certificado UL 2272.</p>
+          <p class="desc" data-i18n="prodGlideDesc">Hoverboard em fibra de carbono com auto-equilíbrio. Certificado UL 2272.</p>
           <div class="produto-foot">
             <span class="produto-preco"><span class="m">R$</span>4.890</span>
-            <a href="#" class="produto-acao">Ver →</a>
+            <a href="#" class="produto-acao" data-i18n="prodView">Ver →</a>
           </div>
         </article>
 
         <article class="produto">
           <p class="produto-num">№ 06 / 06</p>
           <div class="produto-img">
-            <span class="produto-tag tag-novo">Pré-venda</span>
+            <span class="produto-tag tag-novo" data-i18n="tagPresale">Pré-venda</span>
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quadricóptero racing FPV em vista de três quartos">
               <g stroke="#1a140e" fill="none" stroke-width="6" stroke-linecap="round">
                 <line x1="55" y1="65" x2="100" y2="100"/>
@@ -2209,10 +2422,10 @@
           </div>
           <p class="produto-cat">Drones FPV</p>
           <h3>Falcon FPV 5"</h3>
-          <p class="desc">Quadricóptero racing 5 polegadas. Frame em fibra de carbono, motor 2207, ESC 60A.</p>
+          <p class="desc" data-i18n="prodFalconDesc">Quadricóptero racing 5 polegadas. Frame em fibra de carbono, motor 2207, ESC 60A.</p>
           <div class="produto-foot">
             <span class="produto-preco"><span class="m">R$</span>2.890</span>
-            <a href="#" class="produto-acao">Ver →</a>
+            <a href="#" class="produto-acao" data-i18n="prodView">Ver →</a>
           </div>
         </article>
 
@@ -2326,15 +2539,15 @@
   <section class="newsletter-section" id="contato" aria-label="Receba nossa newsletter">
     <div class="newsletter-grid">
       <div>
-        <h2>Boletim mensal,<br>sem <i>enrolação</i>.</h2>
-        <p>Uma vez por mês: estoque novo, achados de oficina, peças com defeito que você precisa saber. Curto, útil, fácil de cancelar.</p>
+        <h2 data-i18n-html="newsletterTitle">Boletim mensal,<br>sem <i>enrolação</i>.</h2>
+        <p data-i18n="newsletterDesc">Uma vez por mês: estoque novo, achados de oficina, peças com defeito que você precisa saber. Curto, útil, fácil de cancelar.</p>
       </div>
       <form class="newsletter-form" onsubmit="enviarNewsletter(event)">
-        <label for="email-newsletter" class="sr-only">Seu e-mail para o boletim</label>
-        <input type="email" id="email-newsletter" name="email" placeholder="seu@email.com" required autocomplete="email" />
-        <button type="submit">Assinar →</button>
+        <label for="email-newsletter" class="sr-only" data-i18n="newsletterLabel">Seu e-mail para o boletim</label>
+        <input type="email" id="email-newsletter" name="email" placeholder="seu@email.com" data-i18n-placeholder="newsletterPlaceholder" required autocomplete="email" />
+        <button type="submit" data-i18n="newsletterSubmit">Assinar →</button>
       </form>
-      <p class="newsletter-meta">Cancele com 1 clique · Nunca repassamos seu e-mail</p>
+      <p class="newsletter-meta" data-i18n="newsletterMeta">Cancele com 1 clique · Nunca repassamos seu e-mail</p>
     </div>
   </section>
 
@@ -2403,6 +2616,73 @@
         </nav>
       </div>
     </div>
+
+    <!-- Formulário de contato -->
+    <section class="footer-form-section" aria-labelledby="footer-form-title">
+      <div class="footer-form-header">
+        <h2 id="footer-form-title" data-i18n-html="footerFormTitle">Fale com a <i>Arngren</i></h2>
+        <p data-i18n="footerFormDesc">Dúvidas sobre produtos, oficina ou pedidos? Envie uma mensagem — respondemos em até 24 h úteis.</p>
+      </div>
+      <form class="footer-contact-form" id="footer-contact-form" novalidate>
+        <div class="form-field">
+          <label for="footer-nome" data-i18n="formName">Nome</label>
+          <input
+            type="text"
+            id="footer-nome"
+            name="nome"
+            data-i18n-placeholder="formNamePh"
+            placeholder="Seu nome completo"
+            autocomplete="name"
+            required
+            minlength="2"
+            aria-describedby="footer-nome-error" />
+          <span class="field-error" id="footer-nome-error" role="alert"></span>
+        </div>
+        <div class="form-field">
+          <label for="footer-email" data-i18n="formEmail">E-mail</label>
+          <input
+            type="email"
+            id="footer-email"
+            name="email"
+            data-i18n-placeholder="formEmailPh"
+            placeholder="seu@email.com"
+            autocomplete="email"
+            required
+            aria-describedby="footer-email-error" />
+          <span class="field-error" id="footer-email-error" role="alert"></span>
+        </div>
+        <div class="form-field form-field--full">
+          <label for="footer-assunto" data-i18n="formSubject">Assunto</label>
+          <input
+            type="text"
+            id="footer-assunto"
+            name="assunto"
+            data-i18n-placeholder="formSubjectPh"
+            placeholder="Ex.: Garantia do drone, dúvida sobre frete…"
+            required
+            minlength="3"
+            aria-describedby="footer-assunto-error" />
+          <span class="field-error" id="footer-assunto-error" role="alert"></span>
+        </div>
+        <div class="form-field form-field--full">
+          <label for="footer-mensagem" data-i18n="formMessage">Mensagem</label>
+          <textarea
+            id="footer-mensagem"
+            name="mensagem"
+            rows="4"
+            data-i18n-placeholder="formMessagePh"
+            placeholder="Descreva sua dúvida ou solicitação…"
+            required
+            minlength="10"
+            aria-describedby="footer-mensagem-error"></textarea>
+          <span class="field-error" id="footer-mensagem-error" role="alert"></span>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit" id="footer-form-submit" data-i18n="formSubmit">Enviar mensagem</button>
+          <p class="form-status" id="footer-form-status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
 
     <!-- Assinatura dos devs -->
     <div class="devs-strip">
@@ -2480,36 +2760,35 @@
   <div class="cart-overlay" id="cart-overlay" aria-hidden="true" onclick="toggleCart()"></div>
   <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-labelledby="cart-titulo" aria-hidden="true">
     <header class="cart-header">
-      <h2 id="cart-titulo">Sua <i>sacola</i></h2>
-      <button type="button" class="cart-close" aria-label="Fechar sacola" onclick="toggleCart()">✕</button>
+      <h2 id="cart-titulo" data-i18n-html="cartTitle">Sua <i>sacola</i></h2>
+      <button type="button" class="cart-close" aria-label="Fechar sacola" data-i18n-aria="cartClose" onclick="toggleCart()">✕</button>
     </header>
     <div class="cart-body" id="cart-body">
-      <div class="cart-empty">
+      <div class="cart-empty" id="cart-empty">
         <span class="empty-icon" aria-hidden="true">🛒</span>
-        Sua sacola está vazia.<br>
-        Adicione produtos do catálogo.
+        <span data-i18n-html="cartEmpty">Sua sacola está vazia.<br>Adicione produtos do catálogo.</span>
       </div>
     </div>
     <footer class="cart-footer">
       <div class="cart-total">
-        <span class="label">Total</span>
+        <span class="label" data-i18n="cartTotal">Total</span>
         <span class="total-value" id="cart-total">R$ 0</span>
       </div>
-      <button type="button" class="cart-checkout" onclick="checkout()">Finalizar pedido →</button>
+      <button type="button" class="cart-checkout" id="cart-checkout-btn" onclick="checkout()" data-i18n="cartCheckout">Finalizar pedido →</button>
     </footer>
   </aside>
 
   <!-- ════════ SEARCH OVERLAY ════════ -->
   <div class="search-overlay" id="search-overlay-real" role="dialog" aria-labelledby="search-titulo" aria-hidden="true">
     <div class="search-inner">
-      <button type="button" class="search-close" aria-label="Fechar busca" onclick="toggleSearch()">✕</button>
+      <button type="button" class="search-close" aria-label="Fechar busca" data-i18n-aria="searchClose" onclick="toggleSearch()">✕</button>
       <form id="search-form" role="search" autocomplete="off">
-        <label for="search-input" id="search-titulo">O que você procura?</label>
-        <input type="search" id="search-input" name="q" placeholder="Drone, scooter, helicóptero..." aria-describedby="search-desc">
-        <p id="search-desc" class="sr-only">Digite para filtrar produtos em tempo real.</p>
+        <label for="search-input" id="search-titulo" data-i18n="searchTitle">O que você procura?</label>
+        <input type="search" id="search-input" name="q" placeholder="Drone, scooter, helicóptero..." data-i18n-placeholder="searchPlaceholder" aria-describedby="search-desc">
+        <p id="search-desc" class="sr-only" data-i18n="searchDesc">Digite para filtrar produtos em tempo real.</p>
       </form>
       <div class="search-suggestions">
-        <span>Sugestões:</span>
+        <span data-i18n="searchSuggestions">Sugestões:</span>
         <button type="button" onclick="buscarSugestao('drone')">drone</button>
         <button type="button" onclick="buscarSugestao('e-bike')">e-bike</button>
         <button type="button" onclick="buscarSugestao('scooter')">scooter</button>
@@ -2526,15 +2805,15 @@
         <span id="qv-emoji" style="font-size: 6rem;" aria-hidden="true">🚁</span>
       </div>
       <div class="qv-info">
-        <button type="button" class="qv-close" aria-label="Fechar" onclick="fecharQuickView()">✕</button>
+        <button type="button" class="qv-close" aria-label="Fechar" data-i18n-aria="qvClose" onclick="fecharQuickView()">✕</button>
         <span class="qv-cat" id="qv-cat">Drones</span>
         <h2 id="qv-nome">Produto</h2>
         <p class="qv-desc" id="qv-desc">Descrição</p>
         <dl class="qv-specs" id="qv-specs"></dl>
         <p class="qv-price" id="qv-preco"></p>
         <div class="qv-actions">
-          <button type="button" class="btn btn-primary" id="qv-add" style="flex:1;">Adicionar à sacola</button>
-          <button type="button" class="btn btn-ghost" onclick="fecharQuickView()">Continuar olhando</button>
+          <button type="button" class="btn btn-primary" id="qv-add" style="flex:1;" data-i18n="qvAdd">Adicionar à sacola</button>
+          <button type="button" class="btn btn-ghost" onclick="fecharQuickView()" data-i18n="qvContinue">Continuar olhando</button>
         </div>
       </div>
     </div>
@@ -2544,13 +2823,377 @@
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
   <script>
+    /* ═══ TEMA ESCURO + IDIOMA ═══ */
+    let currentLang = 'pt';
+
+    const I18N = {
+      pt: {
+        pageTitle: 'Arngren — Drones, Bicicletas Elétricas e RC desde 1983',
+        metaDesc: 'Loja especializada em drones, bicicletas elétricas, scooters e modelismo de controle remoto. Catálogo curado, suporte técnico e entrega para todo o Brasil.',
+        skipLink: 'Pular para o conteúdo principal',
+        navCatalog: 'Catálogo', navHighlights: 'Destaques', navHistory: 'História', navWorkshop: 'Oficina', navContact: 'Contato',
+        mobileNav: 'Navegação', mobileCategories: 'Categorias',
+        searchProducts: 'Buscar produtos', myAccount: 'Minha conta', cartLabel: 'Sacola com 2 itens',
+        themeBtnDark: 'Ativar modo escuro', themeBtnLight: 'Ativar modo claro',
+        themeDarkOn: 'Modo escuro ativado.', themeDarkOff: 'Modo claro ativado.',
+        langBtnEn: 'Mudar para inglês', langBtnPt: 'Switch to Portuguese',
+        langChanged: 'Idioma alterado para português.',
+        ticker1: 'Frete grátis acima de R$ 1.500', ticker2: 'Garantia estendida em todos os drones',
+        ticker3: 'Suporte técnico 7 dias', ticker4: '12x sem juros no cartão',
+        ticker5: 'Loja física em São Paulo', ticker6: 'Novidade: Stark Eco 2 já disponível',
+        heroEdition: 'Edição #142', heroMonth: 'Maio 2026',
+        heroTitle: 'Catálogo<br>de <span class="terra"><i>vôo,</i></span><br><span class="terra"><i>roda</i></span> e<br>transmissão.<sup>★</sup>',
+        heroLead: 'Drones, bicicletas elétricas, scooters e modelismo de controle remoto. Curadoria honesta, suporte de quem entende, e — quando você precisar — peça de reposição em estoque.',
+        heroBtnCatalog: 'Ver catálogo', heroBtnWorkshop: 'Falar com a oficina',
+        featureTag: 'Lançamento da semana / Estoque limitado',
+        featureDesc: 'O sucessor do Mavic 3 chega com sensor de 4/3", gravação 8K HDR e sistema de detecção omnidirecional. Bateria de 51 minutos. Pronto para entrega.',
+        specRange: 'Alcance', specBattery: 'Bateria', specSensor: 'Sensor', specWeight: 'Peso',
+        featurePriceCond: 'ou 12× R$ 2.090 sem juros', featureBuyNow: 'Comprar agora',
+        catDrones: 'Drones', catEbikes: 'E-bikes', catScooters: 'Scooters', catModel: 'Modelismo', catParts: 'Peças',
+        catalogNum: '§ 01 — Catálogo',
+        catalogTitle: 'No <i>estoque</i> esta semana.',
+        catalogIntro: 'Não trabalhamos com revenda em massa. Cada item passa pela <strong>oficina antes do envio</strong> — calibragem, firmware atualizado, teste em bancada.',
+        tagNew: 'Novo', tagBest: 'Mais vendida', tagPresale: 'Pré-venda', prodView: 'Ver →',
+        prodMini5Desc: 'Drone compacto de 249g com câmera 1" e gimbal 3 eixos. Não exige registro na ANAC.',
+        prodStarkDesc: 'E-bike urbana com motor 500W central, autonomia de 80 km e quadro de alumínio.',
+        prodHelixDesc: 'Helicóptero 6 canais com motor brushless dual e estabilização ativa por giroscópio.',
+        prodVoltDesc: 'Scooter dobrável em alumínio aeroespacial. 65 km de autonomia, 45 km/h.',
+        prodGlideDesc: 'Hoverboard em fibra de carbono com auto-equilíbrio. Certificado UL 2272.',
+        prodFalconDesc: 'Quadricóptero racing 5 polegadas. Frame em fibra de carbono, motor 2207, ESC 60A.',
+        newsletterTitle: 'Boletim mensal,<br>sem <i>enrolação</i>.',
+        newsletterDesc: 'Uma vez por mês: estoque novo, achados de oficina, peças com defeito que você precisa saber. Curto, útil, fácil de cancelar.',
+        newsletterLabel: 'Seu e-mail para o boletim', newsletterPlaceholder: 'seu@email.com',
+        newsletterSubmit: 'Assinar →', newsletterMeta: 'Cancele com 1 clique · Nunca repassamos seu e-mail',
+        newsletterEmailError: 'Informe um e-mail válido com @',
+        newsletterSuccess: 'Inscrição confirmada! Verifique sua caixa de entrada.',
+        footerFormTitle: 'Fale com a <i>Arngren</i>',
+        footerFormDesc: 'Dúvidas sobre produtos, oficina ou pedidos? Envie uma mensagem — respondemos em até 24 h úteis.',
+        formName: 'Nome', formEmail: 'E-mail', formSubject: 'Assunto', formMessage: 'Mensagem',
+        formNamePh: 'Seu nome completo', formEmailPh: 'seu@email.com',
+        formSubjectPh: 'Ex.: Garantia do drone, dúvida sobre frete…', formMessagePh: 'Descreva sua dúvida ou solicitação…',
+        formSubmit: 'Enviar mensagem', formSending: 'Enviando…',
+        formFixFields: 'Corrija os campos destacados antes de enviar.',
+        formSuccess: 'Mensagem enviada com sucesso.',
+        formToastSuccess: 'Mensagem enviada! Responderemos em {email}.',
+        formToastError: 'Verifique os campos do formulário.',
+        formNameRequired: 'Informe seu nome.', formNameMin: 'O nome deve ter pelo menos 2 caracteres.',
+        formEmailRequired: 'Informe seu e-mail.', formEmailAt: 'O e-mail deve conter "@".',
+        formEmailInvalid: 'Informe um e-mail válido (ex.: seu@email.com).',
+        formSubjectRequired: 'Informe o assunto.', formSubjectMin: 'O assunto deve ter pelo menos 3 caracteres.',
+        formMessageRequired: 'Escreva sua mensagem.', formMessageMin: 'A mensagem deve ter pelo menos 10 caracteres.',
+        cartTitle: 'Sua <i>sacola</i>', cartClose: 'Fechar sacola',
+        cartEmpty: 'Sua sacola está vazia.<br>Adicione produtos do catálogo.',
+        cartTotal: 'Total', cartCheckout: 'Finalizar pedido →', cartRemove: 'Remover',
+        cartEmptyToast: 'Sacola vazia!', cartAdded: '{nome} adicionado ao carrinho',
+        cartAddedQty: '+1 {nome} no carrinho', cartRemoved: 'Item removido do carrinho',
+        cartOrderConfirm: 'Pedido de R$ {total} confirmado! 🎉',
+        searchTitle: 'O que você procura?', searchPlaceholder: 'Drone, scooter, helicóptero...',
+        searchDesc: 'Digite para filtrar produtos em tempo real.', searchClose: 'Fechar busca',
+        searchSuggestions: 'Sugestões:', searchNoResults: 'Nenhum resultado para "{termo}"',
+        qvClose: 'Fechar', qvAdd: 'Adicionar à sacola', qvContinue: 'Continuar olhando',
+        loginToast: 'Faça login para acessar sua conta',
+        filterToast: 'Filtrando por {cat}'
+      },
+      en: {
+        pageTitle: 'Arngren — Drones, E-bikes & RC since 1983',
+        metaDesc: 'Specialty store for drones, e-bikes, scooters and RC models. Curated catalog, technical support and delivery across Brazil.',
+        skipLink: 'Skip to main content',
+        navCatalog: 'Catalog', navHighlights: 'Highlights', navHistory: 'History', navWorkshop: 'Workshop', navContact: 'Contact',
+        mobileNav: 'Navigation', mobileCategories: 'Categories',
+        searchProducts: 'Search products', myAccount: 'My account', cartLabel: 'Cart with 2 items',
+        themeBtnDark: 'Enable dark mode', themeBtnLight: 'Enable light mode',
+        themeDarkOn: 'Dark mode enabled.', themeDarkOff: 'Light mode enabled.',
+        langBtnEn: 'Switch to English', langBtnPt: 'Mudar para português',
+        langChanged: 'Language changed to English.',
+        ticker1: 'Free shipping over R$ 1,500', ticker2: 'Extended warranty on all drones',
+        ticker3: '7-day technical support', ticker4: '12 interest-free installments',
+        ticker5: 'Physical store in São Paulo', ticker6: 'New: Stark Eco 2 now available',
+        heroEdition: 'Issue #142', heroMonth: 'May 2026',
+        heroTitle: 'Catalog<br>of <span class="terra"><i>flight,</i></span><br><span class="terra"><i>wheel</i></span> &<br>transmission.<sup>★</sup>',
+        heroLead: 'Drones, e-bikes, scooters and RC models. Honest curation, expert support, and — when you need it — replacement parts in stock.',
+        heroBtnCatalog: 'Browse catalog', heroBtnWorkshop: 'Talk to the workshop',
+        featureTag: 'Launch of the week / Limited stock',
+        featureDesc: 'The Mavic 3 successor arrives with a 4/3" sensor, 8K HDR recording and omnidirectional detection. 51-minute battery. Ready to ship.',
+        specRange: 'Range', specBattery: 'Battery', specSensor: 'Sensor', specWeight: 'Weight',
+        featurePriceCond: 'or 12× R$ 2,090 interest-free', featureBuyNow: 'Buy now',
+        catDrones: 'Drones', catEbikes: 'E-bikes', catScooters: 'Scooters', catModel: 'RC Models', catParts: 'Parts',
+        catalogNum: '§ 01 — Catalog',
+        catalogTitle: 'In <i>stock</i> this week.',
+        catalogIntro: 'We don\'t do mass reselling. Every item goes through our <strong>workshop before shipping</strong> — calibration, updated firmware, bench testing.',
+        tagNew: 'New', tagBest: 'Best seller', tagPresale: 'Pre-order', prodView: 'View →',
+        prodMini5Desc: 'Compact 249g drone with 1" camera and 3-axis gimbal. No ANAC registration required.',
+        prodStarkDesc: 'Urban e-bike with 500W mid-drive motor, 80 km range and aluminum frame.',
+        prodHelixDesc: '6-channel helicopter with dual brushless motor and active gyro stabilization.',
+        prodVoltDesc: 'Foldable aerospace aluminum scooter. 65 km range, 45 km/h.',
+        prodGlideDesc: 'Carbon fiber hoverboard with self-balance. UL 2272 certified.',
+        prodFalconDesc: '5-inch racing quadcopter. Carbon fiber frame, 2207 motor, 60A ESC.',
+        newsletterTitle: 'Monthly newsletter,<br>no <i>fluff</i>.',
+        newsletterDesc: 'Once a month: new stock, workshop finds, defective parts you need to know about. Short, useful, easy to cancel.',
+        newsletterLabel: 'Your email for the newsletter', newsletterPlaceholder: 'you@email.com',
+        newsletterSubmit: 'Subscribe →', newsletterMeta: 'Cancel in 1 click · We never share your email',
+        newsletterEmailError: 'Enter a valid email with @',
+        newsletterSuccess: 'Subscribed! Check your inbox.',
+        footerFormTitle: 'Talk to <i>Arngren</i>',
+        footerFormDesc: 'Questions about products, workshop or orders? Send a message — we reply within 24 business hours.',
+        formName: 'Name', formEmail: 'Email', formSubject: 'Subject', formMessage: 'Message',
+        formNamePh: 'Your full name', formEmailPh: 'you@email.com',
+        formSubjectPh: 'E.g.: Drone warranty, shipping question…', formMessagePh: 'Describe your question or request…',
+        formSubmit: 'Send message', formSending: 'Sending…',
+        formFixFields: 'Fix the highlighted fields before submitting.',
+        formSuccess: 'Message sent successfully.',
+        formToastSuccess: 'Message sent! We\'ll reply to {email}.',
+        formToastError: 'Please check the form fields.',
+        formNameRequired: 'Enter your name.', formNameMin: 'Name must be at least 2 characters.',
+        formEmailRequired: 'Enter your email.', formEmailAt: 'Email must contain "@".',
+        formEmailInvalid: 'Enter a valid email (e.g. you@email.com).',
+        formSubjectRequired: 'Enter a subject.', formSubjectMin: 'Subject must be at least 3 characters.',
+        formMessageRequired: 'Write your message.', formMessageMin: 'Message must be at least 10 characters.',
+        cartTitle: 'Your <i>cart</i>', cartClose: 'Close cart',
+        cartEmpty: 'Your cart is empty.<br>Add products from the catalog.',
+        cartTotal: 'Total', cartCheckout: 'Checkout →', cartRemove: 'Remove',
+        cartEmptyToast: 'Cart is empty!', cartAdded: '{nome} added to cart',
+        cartAddedQty: '+1 {nome} in cart', cartRemoved: 'Item removed from cart',
+        cartOrderConfirm: 'Order of R$ {total} confirmed! 🎉',
+        searchTitle: 'What are you looking for?', searchPlaceholder: 'Drone, scooter, helicopter...',
+        searchDesc: 'Type to filter products in real time.', searchClose: 'Close search',
+        searchSuggestions: 'Suggestions:', searchNoResults: 'No results for "{termo}"',
+        qvClose: 'Close', qvAdd: 'Add to cart', qvContinue: 'Keep browsing',
+        loginToast: 'Sign in to access your account',
+        filterToast: 'Filtering by {cat}'
+      }
+    };
+
+    function t(key, vars = {}) {
+      let str = (I18N[currentLang] && I18N[currentLang][key]) || I18N.pt[key] || key;
+      Object.entries(vars).forEach(([k, v]) => { str = str.replace(`{${k}}`, v); });
+      return str;
+    }
+
+    function prodCat(p) { return currentLang === 'en' ? (p.catEn || p.cat) : p.cat; }
+    function prodDesc(p) { return currentLang === 'en' ? (p.descEn || p.desc) : p.desc; }
+    function prodSpecs(p) { return currentLang === 'en' ? (p.specsEn || p.specs) : p.specs; }
+
+    function applyLanguage(lang, silent = false) {
+      currentLang = lang;
+      document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+      localStorage.setItem('arn_lang', lang);
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (I18N[lang][key] !== undefined) el.textContent = I18N[lang][key];
+      });
+
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.dataset.i18nHtml;
+        if (I18N[lang][key] !== undefined) el.innerHTML = I18N[lang][key];
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (I18N[lang][key] !== undefined) el.placeholder = I18N[lang][key];
+      });
+
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.dataset.i18nAria;
+        if (I18N[lang][key] !== undefined) el.setAttribute('aria-label', I18N[lang][key]);
+      });
+
+      const langBtn = document.getElementById('btn-lang');
+      if (langBtn) {
+        langBtn.textContent = lang === 'en' ? 'PT' : 'EN';
+        langBtn.setAttribute('aria-label', t(lang === 'en' ? 'langBtnPt' : 'langBtnEn'));
+      }
+
+      document.title = t('pageTitle');
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.content = t('metaDesc');
+
+      updateThemeButton(document.documentElement.classList.contains('theme-dark'));
+      if (typeof renderCart === 'function') renderCart();
+      const searchInput = document.getElementById('search-input');
+      if (typeof renderSearchResults === 'function') renderSearchResults(searchInput?.value || '');
+
+      const live = document.getElementById('aria-live-region');
+      if (!silent && live) live.textContent = t('langChanged');
+    }
+
+    function toggleLanguage() {
+      applyLanguage(currentLang === 'pt' ? 'en' : 'pt');
+    }
+
+    function updateThemeButton(dark) {
+      const btn = document.getElementById('btn-theme');
+      const icon = document.getElementById('icon-theme');
+      if (!btn) return;
+      btn.setAttribute('aria-pressed', String(dark));
+      btn.setAttribute('aria-label', t(dark ? 'themeBtnLight' : 'themeBtnDark'));
+      if (icon) {
+        icon.innerHTML = dark
+          ? '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>'
+          : '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+      }
+    }
+
+    function toggleTheme() {
+      const dark = document.documentElement.classList.toggle('theme-dark');
+      localStorage.setItem('arn_theme', dark ? 'dark' : 'light');
+      updateThemeButton(dark);
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = dark ? '#12100c' : '#f4ede0';
+      const live = document.getElementById('aria-live-region');
+      if (live) live.textContent = t(dark ? 'themeDarkOn' : 'themeDarkOff');
+    }
+
+    function initThemeAndLang() {
+      try {
+        const savedLang = localStorage.getItem('arn_lang');
+        if (savedLang === 'en') applyLanguage('en', true);
+        else currentLang = 'pt';
+        const dark = localStorage.getItem('arn_theme') === 'dark';
+        updateThemeButton(dark);
+        if (dark) {
+          const meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.content = '#12100c';
+        }
+      } catch (e) {}
+    }
+
     /* Newsletter */
     function enviarNewsletter(e) {
       e.preventDefault();
       const live = document.getElementById('aria-live-region');
       const input = document.getElementById('email-newsletter');
-      live.textContent = `Inscrição confirmada para ${input.value}.`;
+      if (!input.value.includes('@')) {
+        toast(t('newsletterEmailError'), 'error');
+        return;
+      }
+      live.textContent = `${t('newsletterSuccess')} ${input.value}`;
+      toast(t('newsletterSuccess'));
       input.value = '';
+    }
+
+    /* Formulário de contato no footer */
+    function getFooterFormRules() {
+      return {
+        'footer-nome': {
+          validate(value) {
+            const v = value.trim();
+            if (!v) return t('formNameRequired');
+            if (v.length < 2) return t('formNameMin');
+            return '';
+          }
+        },
+        'footer-email': {
+          validate(value) {
+            const v = value.trim();
+            if (!v) return t('formEmailRequired');
+            if (!v.includes('@')) return t('formEmailAt');
+            const [local, domain] = v.split('@');
+            if (!local || !domain || !domain.includes('.')) return t('formEmailInvalid');
+            return '';
+          }
+        },
+        'footer-assunto': {
+          validate(value) {
+            const v = value.trim();
+            if (!v) return t('formSubjectRequired');
+            if (v.length < 3) return t('formSubjectMin');
+            return '';
+          }
+        },
+        'footer-mensagem': {
+          validate(value) {
+            const v = value.trim();
+            if (!v) return t('formMessageRequired');
+            if (v.length < 10) return t('formMessageMin');
+            return '';
+          }
+        }
+      };
+    }
+
+    function validarCampoFooter(input, mostrarErro = true) {
+      const footerFormRules = getFooterFormRules();
+      const rule = footerFormRules[input.id];
+      if (!rule) return true;
+      const erro = rule.validate(input.value);
+      const errorEl = document.getElementById(`${input.id}-error`);
+
+      input.classList.toggle('is-invalid', mostrarErro && !!erro);
+      input.classList.toggle('is-valid', mostrarErro && !erro && input.value.trim() !== '');
+
+      if (errorEl) errorEl.textContent = mostrarErro ? erro : '';
+      input.setAttribute('aria-invalid', String(!!erro));
+
+      return !erro;
+    }
+
+    function initFooterContactForm() {
+      const form = document.getElementById('footer-contact-form');
+      if (!form) return;
+
+      const campos = Object.keys(getFooterFormRules()).map(id => document.getElementById(id));
+      const statusEl = document.getElementById('footer-form-status');
+      const submitBtn = document.getElementById('footer-form-submit');
+
+      campos.forEach(campo => {
+        if (!campo) return;
+        let tocado = false;
+
+        campo.addEventListener('blur', () => {
+          tocado = true;
+          validarCampoFooter(campo);
+        });
+
+        campo.addEventListener('input', () => {
+          if (tocado) validarCampoFooter(campo);
+          if (statusEl) {
+            statusEl.textContent = '';
+            statusEl.className = 'form-status';
+          }
+        });
+      });
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const validos = campos.every(campo => validarCampoFooter(campo, true));
+
+        if (!validos) {
+          const primeiroInvalido = campos.find(c => !validarCampoFooter(c, true));
+          primeiroInvalido?.focus();
+          if (statusEl) {
+            statusEl.textContent = t('formFixFields');
+            statusEl.className = 'form-status is-error';
+          }
+          toast(t('formToastError'), 'error');
+          return;
+        }
+
+        const dados = Object.fromEntries(new FormData(form));
+        submitBtn.disabled = true;
+        submitBtn.textContent = t('formSending');
+
+        setTimeout(() => {
+          toast(t('formToastSuccess', { email: dados.email }));
+          if (statusEl) {
+            statusEl.textContent = t('formSuccess');
+            statusEl.className = 'form-status is-success';
+          }
+          const live = document.getElementById('aria-live-region');
+          if (live) live.textContent = `Formulário enviado por ${dados.nome}.`;
+
+          form.reset();
+          campos.forEach(campo => {
+            campo.classList.remove('is-valid', 'is-invalid');
+            campo.setAttribute('aria-invalid', 'false');
+            const errorEl = document.getElementById(`${campo.id}-error`);
+            if (errorEl) errorEl.textContent = '';
+          });
+
+          submitBtn.disabled = false;
+          submitBtn.textContent = t('formSubmit');
+        }, 600);
+      });
     }
 
     /* ═══ MENU MOBILE ═══ */
@@ -2647,7 +3290,7 @@
       if (!('speechSynthesis' in window)) return;
       window.speechSynthesis.cancel();
       const utter = new SpeechSynthesisUtterance(texto);
-      utter.lang = 'pt-BR';
+      utter.lang = currentLang === 'en' ? 'en-US' : 'pt-BR';
       window.speechSynthesis.speak(utter);
     }
     let leitorTimeout = null;
@@ -2713,13 +3356,13 @@
 
     // Catálogo de produtos (dados completos)
     const PRODUTOS = [
-      { id: 'mavic',   nome: 'DJI Mavic 4 Pro',     cat: 'Drones',        preco: 23490, desc: 'Drone profissional 8K com sensor 4/3" e gravação omnidirecional. Bateria de 51 minutos.', emoji: '🚁', specs: { 'Alcance': '15 km', 'Bateria': '51 min', 'Sensor': '4/3 CMOS', 'Peso': '958 g' } },
-      { id: 'mini5',   nome: 'DJI Mini 5 Pro',      cat: 'Drones',        preco: 8290,  desc: 'Drone compacto de 249g com câmera 1" e gimbal 3 eixos. Não exige registro na ANAC.', emoji: '🚁', specs: { 'Peso': '249 g', 'Câmera': '1"', 'Bateria': '34 min', 'Alcance': '10 km' } },
-      { id: 'stark',   nome: 'Stark Eco 2',         cat: 'E-bikes',       preco: 9890,  desc: 'E-bike urbana com motor 500W central, autonomia de 80 km e quadro de alumínio.', emoji: '🚲', specs: { 'Motor': '500W', 'Autonomia': '80 km', 'Quadro': 'Alumínio', 'Peso': '23 kg' } },
-      { id: 'helix',   nome: 'Helix RC Pro',        cat: 'Modelismo',     preco: 3490,  desc: 'Helicóptero 6 canais com motor brushless dual e estabilização ativa por giroscópio.', emoji: '🚁', specs: { 'Canais': '6', 'Motor': 'Brushless', 'Bateria': '15 min', 'Alcance': '500 m' } },
-      { id: 'volt',    nome: 'Volt SL Sapphire',    cat: 'Scooters',      preco: 6490,  desc: 'Scooter dobrável em alumínio aeroespacial. 65 km de autonomia, 45 km/h.', emoji: '🛴', specs: { 'Velocidade': '45 km/h', 'Autonomia': '65 km', 'Peso': '14 kg', 'Carga': '120 kg' } },
-      { id: 'glide',   nome: 'Glide Carbon X',      cat: 'Mobilidade',    preco: 4890,  desc: 'Hoverboard em fibra de carbono com auto-equilíbrio. Certificado UL 2272.', emoji: '🛹', specs: { 'Material': 'Carbono', 'Velocidade': '15 km/h', 'Bateria': '20 km', 'Peso': '8 kg' } },
-      { id: 'falcon',  nome: 'Falcon FPV 5"',       cat: 'Drones FPV',    preco: 2890,  desc: 'Quadricóptero racing 5 polegadas. Frame em fibra de carbono, motor 2207, ESC 60A.', emoji: '🚁', specs: { 'Frame': '5"', 'Motor': '2207', 'ESC': '60A', 'Velocidade': '180 km/h' } }
+      { id: 'mavic',   nome: 'DJI Mavic 4 Pro',     cat: 'Drones',        catEn: 'Drones',        preco: 23490, desc: 'Drone profissional 8K com sensor 4/3" e gravação omnidirecional. Bateria de 51 minutos.', descEn: 'Professional 8K drone with 4/3" sensor and omnidirectional recording. 51-minute battery.', emoji: '🚁', specs: { 'Alcance': '15 km', 'Bateria': '51 min', 'Sensor': '4/3 CMOS', 'Peso': '958 g' }, specsEn: { 'Range': '15 km', 'Battery': '51 min', 'Sensor': '4/3 CMOS', 'Weight': '958 g' } },
+      { id: 'mini5',   nome: 'DJI Mini 5 Pro',      cat: 'Drones',        catEn: 'Drones',        preco: 8290,  desc: 'Drone compacto de 249g com câmera 1" e gimbal 3 eixos. Não exige registro na ANAC.', descEn: 'Compact 249g drone with 1" camera and 3-axis gimbal. No ANAC registration required.', emoji: '🚁', specs: { 'Peso': '249 g', 'Câmera': '1"', 'Bateria': '34 min', 'Alcance': '10 km' }, specsEn: { 'Weight': '249 g', 'Camera': '1"', 'Battery': '34 min', 'Range': '10 km' } },
+      { id: 'stark',   nome: 'Stark Eco 2',         cat: 'E-bikes',       catEn: 'E-bikes',       preco: 9890,  desc: 'E-bike urbana com motor 500W central, autonomia de 80 km e quadro de alumínio.', descEn: 'Urban e-bike with 500W mid-drive motor, 80 km range and aluminum frame.', emoji: '🚲', specs: { 'Motor': '500W', 'Autonomia': '80 km', 'Quadro': 'Alumínio', 'Peso': '23 kg' }, specsEn: { 'Motor': '500W', 'Range': '80 km', 'Frame': 'Aluminum', 'Weight': '23 kg' } },
+      { id: 'helix',   nome: 'Helix RC Pro',        cat: 'Modelismo',     catEn: 'RC Models',     preco: 3490,  desc: 'Helicóptero 6 canais com motor brushless dual e estabilização ativa por giroscópio.', descEn: '6-channel helicopter with dual brushless motor and active gyro stabilization.', emoji: '🚁', specs: { 'Canais': '6', 'Motor': 'Brushless', 'Bateria': '15 min', 'Alcance': '500 m' }, specsEn: { 'Channels': '6', 'Motor': 'Brushless', 'Battery': '15 min', 'Range': '500 m' } },
+      { id: 'volt',    nome: 'Volt SL Sapphire',    cat: 'Scooters',      catEn: 'Scooters',      preco: 6490,  desc: 'Scooter dobrável em alumínio aeroespacial. 65 km de autonomia, 45 km/h.', descEn: 'Foldable aerospace aluminum scooter. 65 km range, 45 km/h.', emoji: '🛴', specs: { 'Velocidade': '45 km/h', 'Autonomia': '65 km', 'Peso': '14 kg', 'Carga': '120 kg' }, specsEn: { 'Speed': '45 km/h', 'Range': '65 km', 'Weight': '14 kg', 'Load': '120 kg' } },
+      { id: 'glide',   nome: 'Glide Carbon X',      cat: 'Mobilidade',    catEn: 'Mobility',      preco: 4890,  desc: 'Hoverboard em fibra de carbono com auto-equilíbrio. Certificado UL 2272.', descEn: 'Carbon fiber hoverboard with self-balance. UL 2272 certified.', emoji: '🛹', specs: { 'Material': 'Carbono', 'Velocidade': '15 km/h', 'Bateria': '20 km', 'Peso': '8 kg' }, specsEn: { 'Material': 'Carbon', 'Speed': '15 km/h', 'Battery': '20 km', 'Weight': '8 kg' } },
+      { id: 'falcon',  nome: 'Falcon FPV 5"',       cat: 'Drones FPV',    catEn: 'FPV Drones',    preco: 2890,  desc: 'Quadricóptero racing 5 polegadas. Frame em fibra de carbono, motor 2207, ESC 60A.', descEn: '5-inch racing quadcopter. Carbon fiber frame, 2207 motor, 60A ESC.', emoji: '🚁', specs: { 'Frame': '5"', 'Motor': '2207', 'ESC': '60A', 'Velocidade': '180 km/h' }, specsEn: { 'Frame': '5"', 'Motor': '2207', 'ESC': '60A', 'Speed': '180 km/h' } }
     ];
 
     // ─── TOASTS ───
@@ -2752,8 +3395,8 @@
       const prod = PRODUTOS.find(p => p.id === id);
       if (!prod) return;
       const existing = cart.find(i => i.id === id);
-      if (existing) { existing.qty++; toast(`+1 ${prod.nome} no carrinho`); }
-      else { cart.push({ ...prod, qty: 1 }); toast(`${prod.nome} adicionado ao carrinho`); }
+      if (existing) { existing.qty++; toast(t('cartAddedQty', { nome: prod.nome })); }
+      else { cart.push({ ...prod, qty: 1 }); toast(t('cartAdded', { nome: prod.nome })); }
       salvarCart();
       renderCart();
       bumpBadge();
@@ -2764,12 +3407,12 @@
       salvarCart();
       renderCart();
       bumpBadge();
-      toast('Item removido do carrinho');
+      toast(t('cartRemoved'));
     }
 
     function bumpBadge() {
       const total = cart.reduce((s, i) => s + i.qty, 0);
-      const badge = document.querySelector('.icon-btn[aria-label*="Sacola"] .badge');
+      const badge = document.querySelector('#btn-cart .badge');
       if (!badge) return;
       if (total > 0) {
         badge.textContent = total;
@@ -2788,7 +3431,7 @@
       document.getElementById('cart-total').textContent = `R$ ${total.toLocaleString('pt-BR')}`;
 
       if (cart.length === 0) {
-        body.innerHTML = `<div class="cart-empty"><span class="empty-icon" aria-hidden="true">🛒</span>Sua sacola está vazia.<br>Adicione produtos do catálogo.</div>`;
+        body.innerHTML = `<div class="cart-empty"><span class="empty-icon" aria-hidden="true">🛒</span><span data-i18n-html="cartEmpty">${t('cartEmpty')}</span></div>`;
         return;
       }
 
@@ -2797,8 +3440,8 @@
           <div class="cart-item-img" aria-hidden="true">${item.emoji}</div>
           <div class="cart-item-info">
             <h4>${item.nome}</h4>
-            <p>${item.cat} ${item.qty > 1 ? '× ' + item.qty : ''}</p>
-            <button class="cart-remove" onclick="removeFromCart('${item.id}')">Remover</button>
+            <p>${prodCat(item)} ${item.qty > 1 ? '× ' + item.qty : ''}</p>
+            <button class="cart-remove" onclick="removeFromCart('${item.id}')">${t('cartRemove')}</button>
           </div>
           <div class="cart-item-price">R$ ${(item.preco * item.qty).toLocaleString('pt-BR')}</div>
         </div>
@@ -2815,8 +3458,9 @@
     }
 
     function checkout() {
-      if (cart.length === 0) { toast('Sacola vazia!', 'error'); return; }
-      toast(`Pedido de R$ ${cart.reduce((s,i)=>s+(i.preco*i.qty),0).toLocaleString('pt-BR')} confirmado! 🎉`);
+      if (cart.length === 0) { toast(t('cartEmptyToast'), 'error'); return; }
+      const total = cart.reduce((s,i)=>s+(i.preco*i.qty),0).toLocaleString('pt-BR');
+      toast(t('cartOrderConfirm', { total }));
       cart = [];
       salvarCart();
       renderCart();
@@ -2840,11 +3484,11 @@
 
     function renderSearchResults(termo) {
       const cont = document.getElementById('search-results');
-      const t = termo.toLowerCase().trim();
-      const filtrados = t ? PRODUTOS.filter(p => p.nome.toLowerCase().includes(t) || p.cat.toLowerCase().includes(t)) : PRODUTOS;
+      const term = termo.toLowerCase().trim();
+      const filtrados = term ? PRODUTOS.filter(p => p.nome.toLowerCase().includes(term) || p.cat.toLowerCase().includes(term) || (p.catEn && p.catEn.toLowerCase().includes(term))) : PRODUTOS;
 
       if (filtrados.length === 0) {
-        cont.innerHTML = `<p class="search-empty" style="text-align:center;padding:2rem;font-family:var(--mono);font-size:.8rem;color:var(--ink-mute);">Nenhum resultado para "${termo}"</p>`;
+        cont.innerHTML = `<p class="search-empty" style="text-align:center;padding:2rem;font-family:var(--mono);font-size:.8rem;color:var(--ink-mute);">${t('searchNoResults', { termo })}</p>`;
         return;
       }
 
@@ -2852,7 +3496,7 @@
         <button class="search-result-item" onclick="abrirQuickView('${p.id}'); toggleSearch();">
           <div>
             <h4>${p.nome}</h4>
-            <p class="search-cat">${p.cat} · R$ ${p.preco.toLocaleString('pt-BR')}</p>
+            <p class="search-cat">${prodCat(p)} · R$ ${p.preco.toLocaleString('pt-BR')}</p>
           </div>
           <span style="font-family:var(--mono);font-size:.7rem;">→</span>
         </button>
@@ -2869,12 +3513,12 @@
       const p = PRODUTOS.find(x => x.id === id);
       if (!p) return;
       const ov = document.getElementById('qv-overlay');
-      document.getElementById('qv-cat').textContent = p.cat;
+      document.getElementById('qv-cat').textContent = prodCat(p);
       document.getElementById('qv-nome').textContent = p.nome;
-      document.getElementById('qv-desc').textContent = p.desc;
+      document.getElementById('qv-desc').textContent = prodDesc(p);
       document.getElementById('qv-emoji').textContent = p.emoji;
       document.getElementById('qv-preco').innerHTML = `<span class="m">R$</span>${p.preco.toLocaleString('pt-BR')}`;
-      document.getElementById('qv-specs').innerHTML = Object.entries(p.specs).map(([k,v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+      document.getElementById('qv-specs').innerHTML = Object.entries(prodSpecs(p)).map(([k,v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
       document.getElementById('qv-add').onclick = () => { addToCart(p.id); fecharQuickView(); };
       ov.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
@@ -2887,17 +3531,11 @@
 
     // ─── BIND DE EVENTOS ───
     document.addEventListener('DOMContentLoaded', () => {
-      // Botão de busca no header
-      const searchBtn = document.querySelector('.icon-btn[aria-label="Buscar produtos"]');
-      if (searchBtn) searchBtn.addEventListener('click', toggleSearch);
+      initThemeAndLang();
 
-      // Botão de carrinho no header
-      const cartBtn = document.querySelector('.icon-btn[aria-label*="Sacola"]');
-      if (cartBtn) cartBtn.addEventListener('click', toggleCart);
-
-      // Botão de conta
-      const accBtn = document.querySelector('.icon-btn[aria-label="Minha conta"]');
-      if (accBtn) accBtn.addEventListener('click', () => toast('Faça login para acessar sua conta'));
+      document.getElementById('btn-search')?.addEventListener('click', toggleSearch);
+      document.getElementById('btn-cart')?.addEventListener('click', toggleCart);
+      document.getElementById('btn-account')?.addEventListener('click', () => toast(t('loginToast')));
 
       // Cards de produto: click abre quick view
       const idMap = ['mavic']; // hero feature primeiro
@@ -2932,6 +3570,7 @@
       // Inicializa badge
       bumpBadge();
       renderCart();
+      initFooterContactForm();
 
       // Submit do search
       document.getElementById('search-form').addEventListener('submit', e => {
@@ -2945,7 +3584,7 @@
         cat.addEventListener('click', e => {
           e.preventDefault();
           document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
-          toast(`Filtrando por ${cat.textContent.trim().split(' ').slice(1).join(' ')}`);
+          toast(t('filterToast', { cat: cat.textContent.trim().split(' ').slice(1).join(' ') }));
         });
       });
     });
